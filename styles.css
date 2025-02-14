@@ -178,6 +178,12 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    .content,
+    .toggle-section {
+        max-width: 100%;
+        padding: 1rem;
+    } 
+
     .evolution-row {
         flex-direction: column;
     }
