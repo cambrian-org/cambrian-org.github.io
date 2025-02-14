@@ -83,6 +83,12 @@ body {
     font-weight: normal;
 }
 
+.subtitle-x-small {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
 .metadata {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -138,7 +144,8 @@ h2 {
 
 .citation-block {
     background: #fafafa;
-    padding: 2rem;
+    width: 100%;
+    padding: 0 2rem;
     margin: 2rem 0;
     font-family: 'Consolas', monospace;
     font-size: 0.9rem;
@@ -266,3 +273,10 @@ footer a:hover {
     }
 }
 
+@media (max-width: 768px) {
+    .content,
+    .toggle-section {
+        max-width: 100%;
+        padding: 1rem;
+    } 
+}
