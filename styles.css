@@ -7,7 +7,7 @@
 
 body {
     margin: 0;
-    font-family: 'Linux Biolinum', sans-serif;
+    font-family: 'Linux Biolinum', sans-serif, Times;
     background: #fff;
     color: #333;
     font-size: 1.2rem; /* Increased font size for body text */
