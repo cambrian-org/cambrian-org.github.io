@@ -22,6 +22,10 @@
     <!-- End of Google Tag Manager setup -->
 </head>
 <body>
+   <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+       <span class="toggle-icon" id="theme-toggle-icon" aria-hidden="true">🌙</span>
+       <span class="toggle-label" id="theme-toggle-label">Dark mode</span>
+   </button>
    <section class="hero">
        <video class="hero-video" autoplay loop muted playsinline>
            <source src="videos/eye-evolution-hero.mp4" type="video/mp4" playbackRate="100">
@@ -34,200 +38,45 @@
        </div>
    </section>
 
-   <section class="story">
-       <div class="content">
-           <h2 style="text-align: center;">Computationally Recreating the Cambrian Explosion of Vision</h2>
-           <p style="text-align: center;">Starting with a single light-detecting cell, our digital creatures face challenges that shaped real eyes over millions of years: navigating the world, discerning food from poison, and evading predators.</p>
-           
-           <div class="evolution-row">
-               <div class="video-container">
-                   <video autoplay loop muted playsinline>
-                       <source src="videos/navigation.mp4" type="video/mp4">
-                   </video>
-                   <div class="caption navigation">Orientation & Navigation</div>
-               </div>
-
-               <div class="video-container">
-                   <video autoplay loop muted playsinline>
-                       <source src="videos/detection.mp4" type="video/mp4">
-                   </video>
-                   <div class="caption detection">Food & Poison Discrimination</div>
-               </div>
-
-               <div class="video-container">
-                   <video autoplay loop muted playsinline>
-                       <source src="videos/tracking.mp4" type="video/mp4">
-                   </video>
-                   <div class="caption tracking">Prey Tracking</div>
-               </div>
-           </div>
-           
-           <div class="task-evolution">
-               <h2 style="text-align: center;">Emergence of eyes from single light-sensitive photoreceptors</h2>
-               <p style="text-align: center;">Our digital creatures evolve different eyes based on survival needs - compound-like eyes for navigation, camera-like eyes for food and poison discrimination.</p>
-               <div class="evolution-row">
-               <div class="video-container">
-                    <video autoplay loop muted playsinline>
-                        <source src="videos/navigation_evolved_agent_initial.mp4" type="video/mp4">
-                    </video>
-                    <div class="caption navigation">Generation 0</div>
-                </div>
-
-                   <div class="arrow" style="width: 50%; height: auto;">
-                       <img src="images/arrow.jpg" alt="Arrow" style="width: 100%; height: auto;">
-                   </div>
-                   
-                   <div class="video-container">
-                   <video autoplay loop muted playsinline>
-                       <source src="videos/navigation_evolved_agent_final.mp4" type="video/mp4">
-                   </video>
-                   <div class="caption navigation">Generation 50</div>
-                   </div>
-               </div>
-           </div>
-
-           <div class="optical-innovations">
-               <h2 style="text-align: center;">Why do eyes have lenses?</h2>
-               <p style="text-align: center;">Our creatures independently discover solutions that nature found - like lenses that focus light - emerging naturally to balance survival pressures and physical constraints of their environment.</p>
-               <div class="evolution-row">
-                <div class="video-container">
-                   <video autoplay loop muted playsinline>
-                       <source src="videos/mask_aperture_sweep.mp4" type="video/mp4">
-                   </video>
-                   <div class="caption detection">Random Mutations to Creature's Optical Gene</div>
-                </div>
-
-                <div class="arrow" style="width: 50%; height: auto;">
-                    <img src="images/arrow.jpg" alt="Arrow" style="width: 100%; height: auto;">
-                </div>
-
-                <div class="video-container">
-                   <video autoplay loop muted playsinline>
-                       <source src="videos/optics_agent.mp4" type="video/mp4">
-                    </video>
-                    <div class="caption detection">Generation 150</div>
-               </div>
+   <section class="evolution-tree" id="evolution-tree">
+       <div class="content tree-header">
+           <div class="tree-kicker">Evolution Tree</div>
+           <h2>Visual intelligence unfurls as you scroll</h2>
+           <p class="tree-lede">Follow the lineage from light-sensitive dots to lenses, simulators, and museum-grade exhibits. The trunk carries the core evolutionary path while branches surface papers, tools, and experiences.</p>
+           <div class="scroll-cue">
+               <span>Scroll to grow the tree</span>
+               <div class="scroll-line"></div>
            </div>
        </div>
-       <!-- <script>
-        const toggleBtn = document.getElementById('toggleBtn');
-        const imageSection = document.getElementById('imageSection');
-        
-        toggleBtn.addEventListener('click', function() {
-            imageSection.classList.toggle('active');
-            toggleBtn.classList.toggle('active');
-            
-            if (imageSection.classList.contains('active')) {
-                toggleBtn.textContent = 'Hide Emergence ▲';
-            } else {
-                toggleBtn.textContent = 'Show Emergence ▼';
-            }
-        });
-        </script> -->
-   </section>
-
-   <section class="papers">
-       <div class="content">
-           <h2 style="text-align: center;">Projects / Papers / Visual Exhibits</h2>
-           <div class="paper">
-               <h2><i>What if Eye...?</i> Computationally Recreating Vision Evolution</h2>
-               <p> <a href="https://kushagratiwary.com">Kushagra Tiwary</a>*, <a href="https://aaronyoung5.github.io/">Aaron Young</a>*, 
-                <a href="https://zaidtas.github.io/">Zaid Tasneem</a>, <a href="http://tzofi.github.io/">Tzofi Klinghoffer</a>, 
-                <a href="https://akshatdave.github.io/">Akshat Dave</a>, 
-                <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a>, 
-                <a href="https://portal.research.lu.se/en/persons/dan-eric-nilsson">Dan-Eric Nilsson</a>, 
-                <a href="https://briancheung.github.io/">Brian Cheung **</a>, 
-                <a href="https://www.media.mit.edu/people/raskar/overview/">Ramesh Raskar **</a></p>
-               <p>
-                We computationally recreate the vision evolution to study what-if scenarios that never happened in nature and understand the principles behind biological vision evolution.
-               </p>
-               <p>
-                * Equal contribution &nbsp;&nbsp;&nbsp; ** Equal advising
-               </p>
-               <a href="https://arxiv.org/abs/2501.15001" class="button">Paper (arXiv Preprint)</a>
-               <a href="/what-if/" class="button">Blog</a>
-               <a href="https://www.youtube.com/watch?v=OuPwGkzh6nM" class="button">TEDx Talk</a>
-           </div>
-           
-           <div class="paper">
-                <h2>Artificial Cambrian Intelligence: Evolve your own creatures in our simulator!</h2>
-                <p>We've created a simulator where you can define and evolve your own embodied agents. You can define your own task, or use existing ones, and evolve agent's eyes or brains.</p>
-                <a href="https://eyes.mit.edu/ACI" class="button">Documentation</a>
-                <a href="https://eyes.mit.edu/ACI/examples/index.html" class="button">Examples</a>
-            </div>
-
-            <div class="paper">
-                <h2>A Roadmap for Generative Design of Visual Intelligence</h2>
-                <p> 
-                <a href="https://kushagratiwary.com">Kushagra Tiwary</a>, 
-                <a href="http://tzofi.github.io/">Tzofi Klinghoffer</a>*, 
-                <a href="https://aaronyoung5.github.io/">Aaron Young</a>*, 
-                <a href="https://sidsoma.github.io/">Siddharth Somasundaram</a>, 
-                <a href="https://nikhilbehari.github.io/">Nikhil Behari</a>, 
-                <a href="https://akshatdave.github.io/">Akshat Dave</a>, 
-                <a href="https://briancheung.github.io/">Brian Cheung</a>, 
-                <a href="https://portal.research.lu.se/en/persons/dan-eric-nilsson">Dan-Eric Nilsson</a>, 
-                <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a>, 
-                <a href="https://www.media.mit.edu/people/raskar/overview/">Ramesh Raskar</a></p>
-                <p>Can we use biological principles (natural evolution) to study the evolution of vision and design more intelligent artificial vision, i.e. enable a <a href="https://evolution.berkeley.edu/the-cambrian-explosion/#:~:text=Around%20530%20million%20years%20ago,we%20observe%20in%20modern%20groups.">Cambrian Explosion</a> of artificial vision.</p>
-                <a href="https://mit-genai.pubpub.org/pub/bcfcb6lu/release/3" class="button">MIT Press Impact Paper</a>
-            </div>
-            <div class="paper">
-                <h2>MIT Museum Exhibit After Dark Event: Evolving Animals Eyes in Virtual Reality!</h2>
-                <p> <a href="https://www.linkedin.com/in/cathyyc/">Cathy Chang</a>, 
-                    <a href="https://aaronyoung5.github.io/">Aaron Young</a>, 
-                    <a href="https://kushagratiwary.com">Kushagra Tiwary</a>
-                </p>
-                <p>We are exhibiting evolving eyes at an After Dark Event at the MIT Museum! Stay tuned for more details.</p>
-                <a href="https://eyes.mit.edu/" class="button">Coming Soon!</a>
-            </div>
+       <div class="tree-wrapper" id="tree-wrapper">
+           <svg class="tree-svg" id="tree-svg" aria-hidden="true"></svg>
+           <div class="nodes-layer" id="tree-nodes"></div>
        </div>
    </section>
 
-   <section class="papers">
+   <section class="partners">
        <div class="content">
-           <!-- <h2>Authors & Institutions</h2> -->
-           <!-- Authors in 2 rows -->
-            <!-- <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; margin-bottom: 1rem;">
-                <div class="author"><a href="https://kushagratiwary.com">Kushagra Tiwary</a><sup>*, 1</sup></div>
-                <div class="author"><a href="https://aaronyoung5.github.io/">Aaron Young</a><sup>*, 1</sup></div>
-                <div class="author"><a href="https://zaidtas.github.io/">Zaid Tasneem</a><sup>5</sup></div>
-                <div class="author"><a href="https://tzofi.github.io/">Tzofi Klinghoffer</a><sup>1</sup></div>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; text-align: center;">
-                <div class="author"><a href="https://akshatdave.github.io/">Akshat Dave</a><sup>1</sup></div>
-                <div class="author"><a href="https://portal.research.lu.se/en/persons/dan-eric-nilsson">Dan-Eric Nilsson</a><sup>4</sup></div>
-                <div class="author"><a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a><sup>2</sup></div>
-                <div class="author"><a href="https://briancheung.github.io/">Brian Cheung</a><sup>†, 2, 3</sup></div>
-                <div class="author"><a href="https://www.media.mit.edu/people/raskar/overview/">Ramesh Raskar</a><sup>†, 1</sup></div>
-            </div> -->
-            <!-- Author contribution notes -->
-            <!-- <div style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                <p>* Equal contribution &nbsp;&nbsp;&nbsp; † Equal advising</p>
-            </div> -->
-            <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; margin: -10rem 0; padding: 2rem 0; border-top: 1px solid #e1e4e8; border-bottom: 1px solid #e1e4e8;">
-                <div class="institution" style="flex: 0 0 auto;">
-                    <img src="images/mas.webp" alt="MIT Media Lab, Camera Culture" style="height: 60px; width: auto;">
-                    <!-- <p style="font-size: 0.9rem;">1</p> -->
-                </div>
-                <div class="institution" style="flex: 0 0 auto;">
-                    <img src="images/cbmm.png" alt="Center for Brains Minds and Machines, MIT" style="height: 60px; width: auto;">
-                    <!-- <p style="font-size: 0.9rem;">2</p> -->
-                </div>
-                <div class="institution" style="flex: 0 0 auto;">
-                    <img src="images/csail.png" alt="InfoLab, MIT CSAIL" style="height: 60px; width: auto;">
-                    <!-- <p style="font-size: 0.9rem;">3</p> -->
-                </div>
-                <div class="institution" style="flex: 0 0 auto;">
-                    <img src="images/lund.svg" alt="Lund Vision Group" style="height: 60px; width: auto;">
-                    <!-- <p style="font-size: 0.9rem;">4</p> -->
-                </div>
-                <div class="institution" style="flex: 0 0 auto;">
-                    <img src="images/rice.png" alt="Rice University" style="height: 60px; width: auto;">
-                    <!-- <p style="font-size: 0.9rem;">5</p> -->   
-                </div>
-            </div>
-        </div>
+           <h3>Supported by</h3>
+           <div class="partner-logos">
+               <div class="institution">
+                   <img src="images/mas.webp" alt="MIT Media Lab, Camera Culture">
+               </div>
+               <div class="institution">
+                   <img src="images/cbmm.png" alt="Center for Brains Minds and Machines, MIT">
+               </div>
+               <div class="institution">
+                   <img src="images/csail.png" alt="InfoLab, MIT CSAIL">
+               </div>
+               <div class="institution">
+                   <img src="images/lund.svg" alt="Lund Vision Group">
+               </div>
+               <div class="institution">
+                   <img src="images/rice.png" alt="Rice University">
+               </div>
+           </div>
+       </div>
+   </section>
+
    <footer style="text-align: center;">
        <div class="content" style="display: inline-block;">
            <p>Copyright 2025 MIT Media Lab. All rights reserved.</p>
@@ -239,5 +88,469 @@
            <a href="https://accessibility.mit.edu" class="accessibility">MIT Accessibility</a>
        </div>
    </footer>
+
+   <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleLabel = document.getElementById('theme-toggle-label');
+    const themeToggleIcon = document.getElementById('theme-toggle-icon');
+
+    function setTheme(theme) {
+        document.body.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (themeToggleLabel) {
+            themeToggleLabel.textContent = theme === 'light' ? 'Light mode' : 'Dark mode';
+        }
+        if (themeToggleIcon) {
+            themeToggleIcon.textContent = theme === 'light' ? '☀️' : '🌙';
+        }
+        if (themeToggle) {
+            themeToggle.setAttribute('aria-pressed', theme === 'light');
+        }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    setTheme(savedTheme || (prefersLight ? 'light' : 'dark'));
+
+    themeToggle?.addEventListener('click', () => {
+        const nextTheme = document.body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        setTheme(nextTheme);
+    });
+
+    const treeNodes = [
+        {
+            id: 'proto-root',
+            parentId: null,
+            order: 0,
+            title: 'Bacterial Phototaxis (Gen 0)',
+            subtitle: 'Light-shy swimmers reacting to gradients before eyes even exist.',
+            tags: ['Seed'],
+            media: { type: 'video', src: 'videos/navigation_evolved_agent_initial.mp4', poster: 'images/eye.png' },
+            links: [],
+            layout: { side: 'center', xOffset: 0, yOffset: -20 }
+        },
+        {
+            id: 'root-spark-left',
+            parentId: 'proto-root',
+            order: 0,
+            title: 'Dormant microbe',
+            variant: 'dot',
+            links: [],
+            layout: { side: 'left', xOffset: -240, yOffset: -90 }
+        },
+        {
+            id: 'root-spark-right',
+            parentId: 'proto-root',
+            order: 0,
+            title: 'Lost colony',
+            variant: 'dot',
+            links: [],
+            layout: { side: 'right', xOffset: 240, yOffset: -70 }
+        },
+        {
+            id: 'orientation',
+            parentId: 'proto-root',
+            order: 1,
+            title: 'Orientation & Navigation',
+            subtitle: 'Primitive photoreceptors learning to follow light gradients and avoid darkness.',
+            tags: ['Task'],
+            media: { type: 'video', src: 'videos/navigation.mp4', poster: 'images/eye.png' },
+            links: [],
+            layout: { side: 'left', xOffset: -180, yOffset: 0 }
+        },
+        {
+            id: 'orientation-detour',
+            parentId: 'orientation',
+            order: 1,
+            title: 'Blinded offshoot',
+            variant: 'dot',
+            links: [],
+            layout: { side: 'right', xOffset: 320, yOffset: -40 }
+        },
+        {
+            id: 'food-poison',
+            parentId: 'orientation',
+            order: 2,
+            title: 'Food & Poison Discrimination',
+            subtitle: 'Camera-like sensing emerges as creatures weigh nourishment versus danger.',
+            tags: ['Task'],
+            media: { type: 'video', src: 'videos/detection.mp4', poster: 'images/eye.png' },
+            links: [],
+            layout: { side: 'right', xOffset: 170, yOffset: 0 }
+        },
+        {
+            id: 'food-detour',
+            parentId: 'food-poison',
+            order: 2,
+            title: 'Toxic cul-de-sac',
+            variant: 'dot',
+            links: [],
+            layout: { side: 'left', xOffset: -320, yOffset: -30 }
+        },
+        {
+            id: 'prey-tracking',
+            parentId: 'food-poison',
+            order: 3,
+            title: 'Prey Tracking',
+            subtitle: 'Predictive gaze and motion-aware retinas for chasing agile targets.',
+            tags: ['Task'],
+            media: { type: 'video', src: 'videos/tracking.mp4', poster: 'images/eye.png' },
+            links: [],
+            layout: { side: 'left', xOffset: -120, yOffset: 10 }
+        },
+        {
+            id: 'tracking-detour',
+            parentId: 'prey-tracking',
+            order: 3,
+            title: 'Trail fizzles',
+            variant: 'dot',
+            links: [],
+            layout: { side: 'right', xOffset: 320, yOffset: 40 }
+        },
+        {
+            id: 'emergence',
+            parentId: 'prey-tracking',
+            order: 4,
+            title: 'Emergence from light-sensitive photoreceptors',
+            subtitle: 'Compound-like eyes versus camera-like eyes appear from survival pressures.',
+            tags: ['Milestone'],
+            media: { type: 'video', src: 'videos/Evolution-of-Compound-Type-Eyes.mp4', poster: 'images/eye.png' },
+            links: [],
+            layout: { side: 'center', xOffset: 0, yOffset: 20 }
+        },
+        {
+            id: 'emergence-detour-left',
+            parentId: 'emergence',
+            order: 4,
+            title: 'Vestigial pigment cup',
+            variant: 'dot',
+            links: [],
+            layout: { side: 'left', xOffset: -280, yOffset: 30 }
+        },
+        {
+            id: 'generations',
+            parentId: 'emergence',
+            order: 5,
+            title: 'Generational improvement (Gen 0 → Gen 50)',
+            subtitle: '50 generations sharpen behaviors, contrast, and reaction time.',
+            tags: ['Evolution'],
+            media: { type: 'video', src: 'videos/navigation_evolved_agent_final.mp4', poster: 'images/eye.png' },
+            links: [],
+            layout: { side: 'right', xOffset: 210, yOffset: -10 }
+        },
+        {
+            id: 'lenses',
+            parentId: 'generations',
+            order: 6,
+            title: 'Why do eyes have lenses?',
+            subtitle: 'Adaptive optics focus scarce photons, balancing blur and brightness.',
+            tags: ['Optics'],
+            media: { type: 'video', src: 'videos/mask_aperture_sweep.mp4', poster: 'images/eye.png' },
+            links: [],
+            layout: { side: 'left', xOffset: -180, yOffset: 0 }
+        },
+        {
+            id: 'mutations',
+            parentId: 'lenses',
+            order: 7,
+            title: 'Optical gene mutations → lens / PSF effects',
+            subtitle: 'Random apertures create sharp, distorted, and kaleidoscopic visual fields.',
+            tags: ['Optical Gene'],
+            media: { type: 'video', src: 'videos/optics_agent.mp4', poster: 'images/eye.png' },
+            links: [],
+            layout: { side: 'right', xOffset: 180, yOffset: 10 }
+        },
+        {
+            id: 'mutation-detour',
+            parentId: 'mutations',
+            order: 7,
+            title: 'Lens bubble',
+            variant: 'dot',
+            links: [],
+            layout: { side: 'left', xOffset: -340, yOffset: -10 }
+        },
+        {
+            id: 'paper',
+            parentId: 'mutations',
+            order: 8,
+            title: 'What if Eye...? Computationally Recreating Vision Evolution',
+            subtitle: 'Paper + talk on replaying the Cambrian explosion in silico.',
+            tags: ['Publication'],
+            media: { type: 'video', src: 'videos/Evolution-of-Camera-Type-Eyes.mp4', poster: 'images/eye.png' },
+            links: [
+                { label: 'Paper (arXiv)', href: 'https://arxiv.org/abs/2501.15001' },
+                { label: 'Blog', href: '/what-if/' },
+                { label: 'TEDx Talk', href: 'https://www.youtube.com/watch?v=OuPwGkzh6nM' }
+            ],
+            layout: { side: 'center', xOffset: 0, yOffset: 20 }
+        },
+        {
+            id: 'aci',
+            parentId: 'paper',
+            order: 9,
+            title: 'Artificial Cambrian Intelligence',
+            subtitle: 'Evolve your own creatures: define tasks, simulate, and watch eyes emerge.',
+            tags: ['Toolkit'],
+            media: { type: 'video', src: 'videos/navigation_evolved_agent_final.mp4', poster: 'images/eye.png' },
+            links: [
+                { label: 'Documentation', href: 'https://eyes.mit.edu/ACI' },
+                { label: 'Examples', href: 'https://eyes.mit.edu/ACI/examples/index.html' }
+            ],
+            layout: { side: 'left', xOffset: -220, yOffset: 0 }
+        },
+        {
+            id: 'roadmap',
+            parentId: 'paper',
+            order: 9,
+            title: 'A Roadmap for Generative Design of Visual Intelligence',
+            subtitle: 'Biological principles point to a Cambrian explosion of artificial vision.',
+            tags: ['Impact'],
+            media: { type: 'video', src: 'videos/circular_aperture_sweep_realistic.mp4', poster: 'images/eye.png' },
+            links: [
+                { label: 'MIT Press Impact Paper', href: 'https://mit-genai.pubpub.org/pub/bcfcb6lu/release/3' }
+            ],
+            layout: { side: 'right', xOffset: 220, yOffset: 0 }
+        },
+        {
+            id: 'exhibits',
+            parentId: 'mutations',
+            order: 8,
+            title: 'Exhibits: Experience the First Signs of Vision in VR',
+            subtitle: 'Museum experiences that let visitors step inside evolving eyesight.',
+            tags: ['Exhibit'],
+            media: { type: 'video', src: 'videos/Evolution-of-Compound-Type-Eyes.mp4', poster: 'images/eye.png' },
+            links: [
+                { label: 'MIT Museum', href: 'https://eyes.mit.edu/' },
+                { label: 'Museum of Science', href: 'https://eyes.mit.edu/' },
+                { label: 'More Details', href: 'https://eyes.mit.edu/' }
+            ],
+            layout: { side: 'right', xOffset: 280, yOffset: 80 }
+        }
+    ];
+
+
+    const nodesLayer = document.getElementById('tree-nodes');
+    const treeWrapper = document.getElementById('tree-wrapper');
+    const treeSvg = document.getElementById('tree-svg');
+    const nodeMap = new Map();
+    const pathMap = new Map();
+    const spacingBase = 260;
+    const startY = 140;
+
+    function createNodeCard(node) {
+        if (node.variant === 'dot') {
+            const dot = document.createElement('div');
+            dot.className = 'tree-node branch-dot upcoming';
+            dot.dataset.id = node.id;
+            dot.dataset.parent = node.parentId || '';
+            dot.dataset.variant = 'dot';
+            dot.setAttribute('aria-label', node.title || 'Decorative branch');
+            dot.innerHTML = `<span class="branch-dot-core"></span>`;
+            nodesLayer.appendChild(dot);
+            nodeMap.set(node.id, dot);
+            return;
+        }
+
+        const card = document.createElement('article');
+        card.className = 'tree-node upcoming';
+        card.dataset.id = node.id;
+        card.dataset.parent = node.parentId || '';
+        card.dataset.variant = 'card';
+
+        const tagMarkup = (node.tags || []).map(tag => `<span class="node-tag">${tag}</span>`).join('');
+        const linksMarkup = (node.links || []).map(link => `<a class="node-cta" href="${link.href}" target="_blank" rel="noopener">${link.label}</a>`).join('');
+
+        let mediaMarkup = '';
+        if (node.media?.type === 'video') {
+            mediaMarkup = `
+                <video autoplay muted loop playsinline poster="${node.media.poster || ''}">
+                    <source src="${node.media.src}" type="video/mp4">
+                </video>
+            `;
+        } else if (node.media?.type === 'image') {
+            mediaMarkup = `<img src="${node.media.src}" alt="${node.title} visual">`;
+        }
+
+        card.innerHTML = `
+            <div class="node-media">${mediaMarkup}</div>
+            <div class="node-body">
+                <div class="node-meta">
+                    <div class="node-tags">${tagMarkup}</div>
+                    <div class="node-branch"></div>
+                </div>
+                <h3>${node.title}</h3>
+                <p>${node.subtitle || ''}</p>
+                <div class="node-ctas">${linksMarkup}</div>
+            </div>
+        `;
+
+        nodesLayer.appendChild(card);
+        nodeMap.set(node.id, card);
+    }
+
+    function renderNodes() {
+        nodesLayer.innerHTML = '';
+        nodeMap.clear();
+        treeNodes
+            .slice()
+            .sort((a, b) => a.order - b.order)
+            .forEach(createNodeCard);
+    }
+
+    function computePosition(node, index) {
+        const width = treeWrapper.clientWidth;
+        const isMobile = window.innerWidth < 900;
+        const baseX = width / 2;
+        const side = node.layout?.side || (index % 2 === 0 ? 'left' : 'right');
+        const branchOffset = isMobile ? 90 : 180;
+        const customOffset = node.layout?.xOffset || 0;
+        const offsetXRaw = customOffset + (side === 'left' ? -branchOffset : side === 'right' ? branchOffset : 0);
+        const offsetX = isMobile ? offsetXRaw * 0.45 : offsetXRaw;
+        const offsetY = node.layout?.yOffset || 0;
+        const y = startY + (node.order * (isMobile ? spacingBase * 0.82 : spacingBase)) + offsetY;
+        const x = baseX + offsetX;
+        return { x, y };
+    }
+
+    function positionNodes() {
+        const orderedNodes = treeNodes.slice().sort((a, b) => a.order - b.order);
+        let maxY = 0;
+        orderedNodes.forEach((node, index) => {
+            const card = nodeMap.get(node.id);
+            if (!card) return;
+            const pos = computePosition(node, index);
+            card.style.left = `${pos.x}px`;
+            card.style.top = `${pos.y}px`;
+            maxY = Math.max(maxY, pos.y);
+        });
+        treeWrapper.style.height = `${maxY + 420}px`;
+        drawPaths();
+    }
+
+    function ensurePaths() {
+        treeSvg.innerHTML = '';
+        pathMap.clear();
+        treeNodes.forEach(node => {
+            if (!node.parentId) return;
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('class', 'tree-path-segment');
+            path.dataset.child = node.id;
+            treeSvg.appendChild(path);
+            pathMap.set(node.id, path);
+        });
+    }
+
+    function drawPaths() {
+        const wrapperRect = treeWrapper.getBoundingClientRect();
+        treeSvg.setAttribute('width', wrapperRect.width);
+        treeSvg.setAttribute('height', treeWrapper.scrollHeight);
+
+        treeNodes.forEach(node => {
+            if (!node.parentId) return;
+            const child = nodeMap.get(node.id);
+            const parent = nodeMap.get(node.parentId);
+            const path = pathMap.get(node.id);
+            if (!child || !parent || !path) return;
+
+            const childRect = child.getBoundingClientRect();
+            const parentRect = parent.getBoundingClientRect();
+            const startX = parentRect.left - wrapperRect.left + (parentRect.width / 2);
+            const startY = parentRect.top - wrapperRect.top + (parentRect.height / 2);
+            const endX = childRect.left - wrapperRect.left + (childRect.width / 2);
+            const endY = childRect.top - wrapperRect.top + (childRect.height / 2);
+            const controlY = (startY + endY) / 2;
+            const d = `M ${startX} ${startY} C ${startX} ${controlY}, ${endX} ${controlY}, ${endX} ${endY}`;
+            path.setAttribute('d', d);
+        });
+    }
+
+    function setActiveNode(activeId) {
+        const orderedNodes = treeNodes.slice().sort((a, b) => a.order - b.order);
+        const storyline = orderedNodes.filter(node => node.variant !== 'dot');
+        const activeIndex = storyline.findIndex(n => n.id === activeId);
+        const visitedIds = new Set(storyline.slice(0, activeIndex).map(n => n.id));
+
+        orderedNodes.forEach(node => {
+            const card = nodeMap.get(node.id);
+            if (!card) return;
+            card.classList.remove('active', 'visited', 'upcoming', 'decorative-node');
+            if (node.variant === 'dot') {
+                card.classList.add('decorative-node');
+                return;
+            }
+            if (visitedIds.has(node.id)) {
+                card.classList.add('visited');
+            } else if (node.id === activeId) {
+                card.classList.add('active');
+            } else {
+                card.classList.add('upcoming');
+            }
+        });
+
+        pathMap.forEach((path, childId) => {
+            const node = treeNodes.find(n => n.id === childId);
+            if (!path || !node) return;
+            const targetCard = nodeMap.get(childId);
+            const parentVisited = node.parentId ? visitedIds.has(node.parentId) || node.parentId === activeId : false;
+
+            if (node.variant === 'dot') {
+                if (parentVisited) {
+                    path.classList.add('path-revealed');
+                } else {
+                    path.classList.remove('path-revealed');
+                }
+                return;
+            }
+
+            if (targetCard && (targetCard.classList.contains('active') || targetCard.classList.contains('visited'))) {
+                path.classList.add('path-revealed');
+            } else {
+                path.classList.remove('path-revealed');
+            }
+        });
+    }
+
+    function setupObserver() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveNode(entry.target.dataset.id);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.35,
+            rootMargin: '-30% 0px -30% 0px'
+        });
+
+        treeNodes
+            .filter(node => node.variant !== 'dot')
+            .forEach(node => {
+                const card = nodeMap.get(node.id);
+                if (card) observer.observe(card);
+            });
+    }
+
+    function initTree() {
+        renderNodes();
+        ensurePaths();
+        positionNodes();
+        const storyline = treeNodes.filter(node => node.variant !== 'dot').sort((a, b) => a.order - b.order);
+        if (storyline.length) {
+            setActiveNode(storyline[0].id);
+        }
+        setupObserver();
+    }
+
+    if (typeof ResizeObserver !== 'undefined') {
+        const resizeObserver = new ResizeObserver(() => {
+            positionNodes();
+        });
+        resizeObserver.observe(treeWrapper);
+    }
+    window.addEventListener('resize', positionNodes);
+
+    window.addEventListener('load', initTree);
+   </script>
 </body>
 </html>
