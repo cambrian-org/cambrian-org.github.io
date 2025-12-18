@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What if Eye...?</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Serif+4:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/linux-biolinum" rel="stylesheet">
     <link rel="icon" href="images/eye-favicon.png" type="image/png">
 
@@ -22,222 +25,333 @@
     <!-- End of Google Tag Manager setup -->
 </head>
 <body>
-   <section class="hero">
-       <video class="hero-video" autoplay loop muted playsinline>
-           <source src="videos/eye-evolution-hero.mp4" type="video/mp4" playbackRate="100">
-       </video>
-       <div class="hero-overlay"></div>
-       <div class="hero-content" style="text-align: center; bottom: -30%; transform: translateY(-50%);">
-           <h1><i>What if Eye</i>...?</h1>
-           <p>We created a virtual petri dish where digital creatures evolve eyes from scratch, replaying millions of years of evolution.</p>
-           <div class="chevron">&#x25BC;</div>
-       </div>
-   </section>
-
-   <section class="story">
-       <div class="content">
-           <h2 style="text-align: center;">Computationally Recreating the Cambrian Explosion of Vision</h2>
-           <p style="text-align: center;">Starting with a single light-detecting cell, our digital creatures face challenges that shaped real eyes over millions of years: navigating the world, discerning food from poison, and evading predators.</p>
-           
-           <div class="evolution-row">
-               <div class="video-container">
-                   <video autoplay loop muted playsinline>
-                       <source src="videos/navigation.mp4" type="video/mp4">
-                   </video>
-                   <div class="caption navigation">Orientation & Navigation</div>
-               </div>
-
-               <div class="video-container">
-                   <video autoplay loop muted playsinline>
-                       <source src="videos/detection.mp4" type="video/mp4">
-                   </video>
-                   <div class="caption detection">Food & Poison Discrimination</div>
-               </div>
-
-               <div class="video-container">
-                   <video autoplay loop muted playsinline>
-                       <source src="videos/tracking.mp4" type="video/mp4">
-                   </video>
-                   <div class="caption tracking">Prey Tracking</div>
-               </div>
-           </div>
-           
-           <div class="task-evolution">
-               <h2 style="text-align: center;">Emergence of eyes from single light-sensitive photoreceptors</h2>
-               <p style="text-align: center;">Our digital creatures evolve different eyes based on survival needs - compound-like eyes for navigation, camera-like eyes for food and poison discrimination.</p>
-               <div class="evolution-row">
-               <div class="video-container">
-                    <video autoplay loop muted playsinline>
-                        <source src="videos/navigation_evolved_agent_initial.mp4" type="video/mp4">
-                    </video>
-                    <div class="caption navigation">Generation 0</div>
-                </div>
-
-                   <div class="arrow" style="width: 50%; height: auto;">
-                       <img src="images/arrow.jpg" alt="Arrow" style="width: 100%; height: auto;">
-                   </div>
-                   
-                   <div class="video-container">
-                   <video autoplay loop muted playsinline>
-                       <source src="videos/navigation_evolved_agent_final.mp4" type="video/mp4">
-                   </video>
-                   <div class="caption navigation">Generation 50</div>
-                   </div>
-               </div>
-           </div>
-
-           <div class="optical-innovations">
-               <h2 style="text-align: center;">Why do eyes have lenses?</h2>
-               <p style="text-align: center;">Our creatures independently discover solutions that nature found - like lenses that focus light - emerging naturally to balance survival pressures and physical constraints of their environment.</p>
-               <div class="evolution-row">
-                <div class="video-container">
-                   <video autoplay loop muted playsinline>
-                       <source src="videos/mask_aperture_sweep.mp4" type="video/mp4">
-                   </video>
-                   <div class="caption detection">Random Mutations to Creature's Optical Gene</div>
-                </div>
-
-                <div class="arrow" style="width: 50%; height: auto;">
-                    <img src="images/arrow.jpg" alt="Arrow" style="width: 100%; height: auto;">
-                </div>
-
-                <div class="video-container">
-                   <video autoplay loop muted playsinline>
-                       <source src="videos/optics_agent.mp4" type="video/mp4">
-                    </video>
-                    <div class="caption detection">Generation 150</div>
-               </div>
-           </div>
-       </div>
-       <!-- <script>
-        const toggleBtn = document.getElementById('toggleBtn');
-        const imageSection = document.getElementById('imageSection');
-        
-        toggleBtn.addEventListener('click', function() {
-            imageSection.classList.toggle('active');
-            toggleBtn.classList.toggle('active');
-            
-            if (imageSection.classList.contains('active')) {
-                toggleBtn.textContent = 'Hide Emergence ▲';
-            } else {
-                toggleBtn.textContent = 'Show Emergence ▼';
-            }
-        });
-        </script> -->
-   </section>
-
-   <section class="papers">
-       <div class="content">
-           <h2 style="text-align: center;">Projects / Papers / Visual Exhibits</h2>
-           <div class="paper">
-               <h2><i>What if Eye...?</i> Computationally Recreating Vision Evolution</h2>
-               <p> <a href="https://kushagratiwary.com">Kushagra Tiwary</a>*, <a href="https://aaronyoung5.github.io/">Aaron Young</a>*, 
-                <a href="https://zaidtas.github.io/">Zaid Tasneem</a>, <a href="http://tzofi.github.io/">Tzofi Klinghoffer</a>, 
-                <a href="https://akshatdave.github.io/">Akshat Dave</a>, 
-                <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a>, 
-                <a href="https://portal.research.lu.se/en/persons/dan-eric-nilsson">Dan-Eric Nilsson</a>, 
-                <a href="https://briancheung.github.io/">Brian Cheung **</a>, 
-                <a href="https://www.media.mit.edu/people/raskar/overview/">Ramesh Raskar **</a></p>
-               <p>
-                We computationally recreate the vision evolution to study what-if scenarios that never happened in nature and understand the principles behind biological vision evolution.
-               </p>
-               <p>
-                * Equal contribution &nbsp;&nbsp;&nbsp; ** Equal advising
-               </p>
-               <a href="https://arxiv.org/abs/2501.15001" class="button">Paper (arXiv Preprint)</a>
-               <a href="/what-if/" class="button">Blog</a>
-               <a href="https://www.youtube.com/watch?v=OuPwGkzh6nM" class="button">TEDx Talk</a>
-           </div>
-           
-           <div class="paper">
-                <h2>Artificial Cambrian Intelligence: Evolve your own creatures in our simulator!</h2>
-                <p>We've created a simulator where you can define and evolve your own embodied agents. You can define your own task, or use existing ones, and evolve agent's eyes or brains.</p>
-                <a href="https://eyes.mit.edu/ACI" class="button">Documentation</a>
-                <a href="https://eyes.mit.edu/ACI/examples/index.html" class="button">Examples</a>
+    <header class="hero">
+        <video class="hero-video" autoplay loop muted playsinline>
+            <source src="videos/eye-evolution-hero.mp4" type="video/mp4" playbackRate="100">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-top">
+            <div class="brand">
+                <span class="brand-title" style="font-size:1.2rem; display:block;">Artificial Cambrian Intelligence</span>
+                <span class="brand-subtitle" style="font-size:0.9rem;">Evolving visual intelligence in video game worlds</span>
             </div>
-
-            <div class="paper">
-                <h2>A Roadmap for Generative Design of Visual Intelligence</h2>
-                <p> 
-                <a href="https://kushagratiwary.com">Kushagra Tiwary</a>, 
-                <a href="http://tzofi.github.io/">Tzofi Klinghoffer</a>*, 
-                <a href="https://aaronyoung5.github.io/">Aaron Young</a>*, 
-                <a href="https://sidsoma.github.io/">Siddharth Somasundaram</a>, 
-                <a href="https://nikhilbehari.github.io/">Nikhil Behari</a>, 
-                <a href="https://akshatdave.github.io/">Akshat Dave</a>, 
-                <a href="https://briancheung.github.io/">Brian Cheung</a>, 
-                <a href="https://portal.research.lu.se/en/persons/dan-eric-nilsson">Dan-Eric Nilsson</a>, 
-                <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a>, 
-                <a href="https://www.media.mit.edu/people/raskar/overview/">Ramesh Raskar</a></p>
-                <p>Can we use biological principles (natural evolution) to study the evolution of vision and design more intelligent artificial vision, i.e. enable a <a href="https://evolution.berkeley.edu/the-cambrian-explosion/#:~:text=Around%20530%20million%20years%20ago,we%20observe%20in%20modern%20groups.">Cambrian Explosion</a> of artificial vision.</p>
-                <a href="https://mit-genai.pubpub.org/pub/bcfcb6lu/release/3" class="button">MIT Press Impact Paper</a>
-            </div>
-            <div class="paper">
-                <h2>MIT Museum Exhibit After Dark Event: Evolving Animals Eyes in Virtual Reality!</h2>
-                <p> <a href="https://www.linkedin.com/in/cathyyc/">Cathy Chang</a>, 
-                    <a href="https://aaronyoung5.github.io/">Aaron Young</a>, 
-                    <a href="https://kushagratiwary.com">Kushagra Tiwary</a>
-                </p>
-                <p>We are exhibiting evolving eyes at an After Dark Event at the MIT Museum! Stay tuned for more details.</p>
-                <a href="https://eyes.mit.edu/" class="button">Coming Soon!</a>
-            </div>
-       </div>
-   </section>
-
-   <section class="papers">
-       <div class="content">
-           <!-- <h2>Authors & Institutions</h2> -->
-           <!-- Authors in 2 rows -->
-            <!-- <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; margin-bottom: 1rem;">
-                <div class="author"><a href="https://kushagratiwary.com">Kushagra Tiwary</a><sup>*, 1</sup></div>
-                <div class="author"><a href="https://aaronyoung5.github.io/">Aaron Young</a><sup>*, 1</sup></div>
-                <div class="author"><a href="https://zaidtas.github.io/">Zaid Tasneem</a><sup>5</sup></div>
-                <div class="author"><a href="https://tzofi.github.io/">Tzofi Klinghoffer</a><sup>1</sup></div>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; text-align: center;">
-                <div class="author"><a href="https://akshatdave.github.io/">Akshat Dave</a><sup>1</sup></div>
-                <div class="author"><a href="https://portal.research.lu.se/en/persons/dan-eric-nilsson">Dan-Eric Nilsson</a><sup>4</sup></div>
-                <div class="author"><a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a><sup>2</sup></div>
-                <div class="author"><a href="https://briancheung.github.io/">Brian Cheung</a><sup>†, 2, 3</sup></div>
-                <div class="author"><a href="https://www.media.mit.edu/people/raskar/overview/">Ramesh Raskar</a><sup>†, 1</sup></div>
-            </div> -->
-            <!-- Author contribution notes -->
-            <!-- <div style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                <p>* Equal contribution &nbsp;&nbsp;&nbsp; † Equal advising</p>
-            </div> -->
-            <div style="display: flex; justify-content: center; align-items: center; gap: 2rem; margin: -10rem 0; padding: 2rem 0; border-top: 1px solid #e1e4e8; border-bottom: 1px solid #e1e4e8;">
-                <div class="institution" style="flex: 0 0 auto;">
-                    <img src="images/mas.webp" alt="MIT Media Lab, Camera Culture" style="height: 60px; width: auto;">
-                    <!-- <p style="font-size: 0.9rem;">1</p> -->
-                </div>
-                <div class="institution" style="flex: 0 0 auto;">
-                    <img src="images/cbmm.png" alt="Center for Brains Minds and Machines, MIT" style="height: 60px; width: auto;">
-                    <!-- <p style="font-size: 0.9rem;">2</p> -->
-                </div>
-                <div class="institution" style="flex: 0 0 auto;">
-                    <img src="images/csail.png" alt="InfoLab, MIT CSAIL" style="height: 60px; width: auto;">
-                    <!-- <p style="font-size: 0.9rem;">3</p> -->
-                </div>
-                <div class="institution" style="flex: 0 0 auto;">
-                    <img src="images/lund.svg" alt="Lund Vision Group" style="height: 60px; width: auto;">
-                    <!-- <p style="font-size: 0.9rem;">4</p> -->
-                </div>
-                <div class="institution" style="flex: 0 0 auto;">
-                    <img src="images/rice.png" alt="Rice University" style="height: 60px; width: auto;">
-                    <!-- <p style="font-size: 0.9rem;">5</p> -->   
-                </div>
+            <!-- <a class="hero-pill" href="https://www.science.org/doi/10.1126/sciadv.ady2888">Published in Science Advances</a> -->
+        </div>
+        <div class="hero-content">
+            <p class="hero-kicker">Science Advances, 2025</p>
+            <h1><i>What if Eye</i>...?</h1>
+            <p class="hero-lede">We evolve eyes and behaviors of artificial embodied agents inside video-game-like physics engines to replay millions of years of evolution.</p>
+            <!-- <p class="hero-sublede">A serious research program on how visual intelligence emerges through co-evolving bodies, sensors, and behavior.</p> -->
+            <div class="hero-actions">
+                <a class="button primary" href="https://www.science.org/doi/10.1126/sciadv.ady2888">Main paper (Science Advances)</a>
+                <a class="button ghost" href="https://mit-genai.pubpub.org/pub/bcfcb6lu/release/3">Impact Paper (MIT Press)</a>
+                <a class="button ghost" href="https://github.com/cambrian-org/ACI">Code</a>
             </div>
         </div>
-   <footer style="text-align: center;">
-       <div class="content" style="display: inline-block;">
-           <p>Copyright 2025 MIT Media Lab. All rights reserved.</p>
-           <div class="links">
-               <a href="mailto:ktiwary@mit.edu,aryoung@mit.edu">Contact</a>
-               <a href="https://github.com/cambrian-org/ACI">GitHub</a>
-               <a href="#">Twitter</a>
-           </div>
-           <a href="https://accessibility.mit.edu" class="accessibility">MIT Accessibility</a>
-       </div>
-   </footer>
+        <a href="#about" class="chevron" aria-label="Scroll to content">&#x25BC;</a>
+    </header>
+
+    <main>
+        <section class="what-if-intro" id="about">
+            <div class="content two-column">
+                <div class="text-block">
+                    <p class="section-kicker">Computationally recreating vision evolution</p>
+                    <h2>A What-if Eye... Universe?</h2>
+                    <p class="author-line">
+                        <a href="https://kushagratiwary.com">Kushagra Tiwary*</a><sup>1</sup>,
+                        <a href="https://aaronyoung5.github.io/">Aaron Young*</a><sup>1</sup>,
+                        <a href="https://zaidtas.github.io/">Zaid Tasneem*</a><sup>2</sup>,
+                        <a href="http://tzofi.github.io/">Tzofi Klinghoffer</a><sup>1,6</sup>,
+                        <a href="https://akshatdave.github.io/">Akshat Dave</a><sup>1</sup>,
+                        <a href="https://mcgovern.mit.edu/profile/tomaso-poggio/">Tomaso Poggio</a><sup>3</sup>,
+                        <a href="https://portal.research.lu.se/en/persons/dan-eric-nilsson">Dan-Eric Nilsson</a><sup>4</sup>,
+                        <a href="https://briancheung.github.io/">Brian Cheung**</a><sup>3,6</sup>,
+                        <a href="https://www.media.mit.edu/people/raskar/overview/">Ramesh Raskar**</a><sup>1</sup>
+                    </p>
+                    <div class="metadata">
+                        <div class="metadata-item">
+                            <div class="institution">MIT Media Lab<sup>1</sup>, Rice University<sup>2</sup>, Center for Brains Minds and Machines, MIT<sup>3</sup>, Lund Vision Group, Lund University<sup>4</sup>, InfoLab, MIT CSAIL<sup>5</sup>, Charles Stark Draper Laboratory<sup>6</sup></div>
+                        </div>
+                    </div>
+                    <p>Evolution happened once. We build a video-game universe to replay evolution. This allows us to computationally study principles behind biological intelligence and create new forms of artificial intelligence.  </p>
+                
+                    <p>Agents begin with a single light-sensing cell and evolve their visual intelligence by facing real physics, embodied constraints, and survival pressures. </p>
+                
+                    <p>The point is to let visual intelligence, the ability to sense (hardware), percieve, reason, and act (software) in an environment, emerge as opposed to being engineered by fixed datasets and human biases.</p>
+                </div>
+                <div class="media-panel">
+                    <div style="margin-top: 100px;">
+                        <img src="images/what-if-universe.png" alt="Illustration of an alternate evolution universe" style="max-width: 950px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 16px rgba(80,90,110,0.10);">
+                    </div>
+                    <p class="media-caption" style="text-align:center; font-size:1.3rem; font-weight:600; line-height:1.5; margin-top:1.2rem;">
+                        What if Darwin had an evolution engine?
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="story" id="questions">
+            <div class="content content-wide">
+                <div class="section-intro align-center media-tone">
+                    <h2>What-if questions about vision, answered by evolving agents</h2>
+                    <p>Each experiment is a hypothesis that we test in our What-If Machine. We pose a what-if question or counterfactual, evolve embodied agents inside video-game-like physics engines, and watch which eyes and behaviors emerge.</p>
+                </div>
+
+                <div class="story-block split-media wash-sky" style="--media-col: 1fr; --text-col: 0.9fr; --media-col-2: 1fr;">
+                    <div class="story-media">
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/movie-S1.mp4" type="video/mp4">
+                        </video>
+                        <p class="media-caption"><b>Detection of food from poison</b> pressures agents to evolve towards high-acuity, forward-facing camera-like eyes.</p>
+                    </div>
+                    <div class="story-text">
+                        <p class="story-question story-question--compact">What if the goals of vision were different?</p>
+                        <!-- <p class="story-question story-question--compact">What if vision were only used for navigation or detection?</p> -->
+                        <p>We start with one light-sensing cell and evolve visuo-motor control in a world with only one task: <b>Detection</b> or <b>Obstacle Avoidance</b>.
+                           </p>
+                    </div>
+                    <div class="story-media">
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/movie-S2.mp4" type="video/mp4">
+                        </video>
+                        <p class="media-caption"><b>Navigation/orientation</b> pressures agents to evolve distributed, compound/eyelet-like vision (wide coverage)</p>
+                    </div>
+
+                </div>
+
+                <div class="story-block wash-sage" style="--media-col: 1.2fr; --text-col: 0.8fr;">
+                    <div class="story-media">
+                        <div class="media-panel" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 32px;">
+                            <video autoplay loop muted playsinline style="max-width: 350px; width: 100%; height: auto; margin: 0; display: block;">
+                                <source src="videos/section2p5_detection.mp4" type="video/mp4">
+                            </video>
+                            <!-- Arrow SVG pointing right -->
+                            <svg style="margin: 0 16px;" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                <path d="M6 24h32m0 0l-12-12m12 12l-12 12" stroke="#4B5970" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <img src="images/det-scaling.png" alt="Detection scaling plot" style="max-width: 400px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 16px rgba(80,90,110,0.10);">
+                        </div>
+                    </div>
+                    <div class="story-text">
+                        <p class="story-question">What if brains stayed small throughout evolution?</p>
+                        <p>When we systematically scale eyes and brain size at the same time, we uncover power-law scaling between neural capacity and task performance — but only when visual acuity scales too. 
+                            If acuity is bottlenecked, scaling the “brain” alone stops buying better behavior.
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="story-block reverse wash-lilac" style="--media-col: 1.2fr; --text-col: 0.8fr;">
+                    <div class="story-text">
+                        <p class="story-question">What if eyes could bend light?</p>
+                        <p>When we enable optical genes, evolution repeatedly discovers lens-like optics because they solve a brutal constraint:</p>
+                        <ul>
+                            <li><b>Without optics</b>, systems hit a hard ceiling — pinhole strategies can sharpen images only by sacrificing light.</li>
+                            <li><b>With optics</b>, lenses emerge as a solution to the fundamental tradeoff between light collection and spatial precision.</li>
+                        </ul>
+                        <div class="media-panel" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 32px;">
+                            <video autoplay loop muted playsinline style="max-width: auto; width: 100%; height: auto; margin: 0; display: block; object-fit: contain;">
+                                <source src="videos/section2p4_movie.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="story-media">
+                        <div class="media-panel" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 32px;">
+                            <img src="paper-figures/results/pupil2-nobg.png" alt="Pupil experiment visualization"
+                                 style="width: auto; height: auto; max-width: 650px; border-radius: 12px; box-shadow: 0 2px 16px rgba(80,90,110,0.10);">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="resources" id="resources">
+            <div class="content">
+                <div class="section-intro">
+                    <h2>Publications, talks, code, and exhibitions</h2>
+                    <p>Explore the peer-reviewed Science Advances paper, roadmap research, talks, open-source tools, and public exhibits that bring evolving intelligence to life.</p>
+                </div>
+
+                <div class="resource-group">
+                    <h3 class="resource-subhead">Publications</h3>
+                    <div class="resource-grid">
+                        <article class="resource-card pastel-lilac">
+                            <div class="resource-header">
+                                <h4>Computationally Recreating Vision Evolution</h4>
+                                <span class="tag">Science Advances</span>
+                            </div>
+                            <img class="resource-image" src="paper-figures/SA-paper.png" alt="Science Advances paper figure">
+                            <p>The peer-reviewed publication detailing the full experimental setup, results, and evolutionary analysis.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://www.science.org/doi/10.1126/sciadv.ady2888">Paper (open access)</a>
+                                <a class="mini-link" href="sciadv.ady2888.pdf">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card pastel-sand">
+                            <div class="resource-header">
+                                <h4>A Roadmap for Generative Design of Visual Intelligence</h4>
+                                <span class="tag">MIT Press</span>
+                            </div>
+                            <img class="resource-image" src="paper-figures/roadmap-paper.png" alt="Roadmap paper figure">
+                            <p>Why should we generate and not hand design visual intelligence? We discuss why it's important, the applications of doing so, and how to get there.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://mit-genai.pubpub.org/pub/bcfcb6lu/release/3">Impact Paper</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card pastel-sage">
+                            <div class="resource-header">
+                                <h4>Designing Imaging Systems with Reinforcement Learning</h4>
+                                <span class="tag">ICCV</span>
+                            </div>
+                            <img class="resource-image" src="paper-figures/diser-paper.png" alt="DISER paper figure">
+                            <p>We propose a new way to codesign imaging systems and task-specific perception models based on feedback from the environment.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://tzofi.com/diser">Project Page</a>
+                                <a class="mini-link" href="https://arxiv.org/abs/2309.13851">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card pastel-peach">
+                            <div class="resource-header">
+                                <h4>Emergence of foveal image sampling from learning to attend in visual scene</h4>
+                                <span class="tag">NeurIPS</span>
+                            </div>
+                            <img class="resource-image" src="videos/fovea-emerge.gif" alt="Foveal image sampling from learning to attend in visual scene">
+                            <p>We show that learning to attend in visual scenes leads to foveal image sampling, a key visual system feature.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://arxiv.org/abs/1611.09430">PDF</a>
+                                <a class="mini-link" href="https://bair.berkeley.edu/blog/2017/11/09/learn-to-attend-fovea/">Blog Post</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card pastel-sky">
+                            <div class="resource-header">
+                                <h4>Designing neural network architectures using reinforcement learning</h4>
+                                <span class="tag">ICLR</span>
+                            </div>
+                            <img class="resource-image" src="images/nas.png" alt="NAS paper figure">
+                            <p>We design neural network architectures using reinforcement learning to improve performance on visual tasks.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://arxiv.org/abs/1611.02167">PDF</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card pastel-rose">
+                            <div class="resource-header">
+                                <h4>Upcoming work!</h4>
+                                <span class="tag">Coming soon</span>
+                            </div>
+                            <p>We are working on a lot of exciting things that we will be releasing soon! We are always 
+                                looking for collaborators and partners to work with in expanding our work to new domains. 
+                                Feel free to reach out to us to join our team!.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="mailto:ktiwary@mit.edu">Email us</a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <div class="resource-group">
+                    <h3 class="resource-subhead">Talks</h3>
+                    <div class="resource-grid">
+                        <article class="resource-card pastel-mint">
+                            <div class="resource-header">
+                                <h4>Redwood Talk</h4>
+                                <span class="tag">Talk</span>
+                            </div>
+                            <img class="resource-image" src="images/redwood-recording.png" alt="Redwood talk figure">
+                            <p>Highlights from a talk at UC Berkeley's Redwood Center.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://redwood.berkeley.edu/seminars/kushagra-tiwary-june-2025">UC Berkeley Talk </a>
+                                <a class="mini-link" href="https://www.youtube.com/watch?v=OuPwGkzh6nM">Tedx Talk </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="resource-group">
+                    <h3 class="resource-subhead">Code</h3>
+                    <div class="resource-grid">
+                        <article class="resource-card pastel-sage">
+                            <div class="resource-header">
+                                <h4>Simulator</h4>
+                                <span class="tag">Open Source</span>
+                            </div>
+                            <p>Run the evolutionary simulator, define new tasks, and evolve your own embodied agents.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://github.com/cambrian-org/ACI">GitHub</a>
+                                <a class="mini-link" href="https://eyes.mit.edu/ACI">Documentation</a>
+                                <a class="mini-link" href="https://eyes.mit.edu/ACI/examples/index.html">Examples</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card pastel-sky">
+                            <div class="resource-header">
+                                <h4>Colab Notebook (coming soon)</h4>
+                                <span class="tag">Notebook</span>
+                            </div>
+                            <p>Interactive notebooks for experimenting with Cambrian agents directly in the browser.</p>
+                            <div class="mini-links">
+                                <span class="mini-link">Coming soon</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="resource-group">
+                    <h3 class="resource-subhead">Exhibitions</h3>
+                    <div class="resource-grid resource-grid--wide">
+                        <article class="resource-card pastel-peach">
+                            <div class="resource-header">
+                                <h4>Video Exhibition</h4>
+                                <span class="tag">Public Engagement</span>
+                            </div>
+                            <img class="resource-image resource-image--wide" src="paper-figures/firstsignsofvision-exhibition.gif" alt="Exhibition preview of evolving eyes">
+                            <p>How can we interact with evolution? Our exhibitions let visitors experience evolving vision in a hands-on way.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://eyes.mit.edu/exhibitions/mit-museum">MIT Museum After Dark</a>
+                                <a class="mini-link" href="https://eyes.mit.edu/exhibitions/mos">Museum of Science Boston</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="affiliations">
+            <div class="content">
+                <div class="logo-row">
+                    <div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap;">
+                        <!-- <img src="images/mit-logo.png" alt="MIT" style="height:70px;"> -->
+                        <img src="images/camera-culture-nobg.png" alt="MIT Media Lab, Camera Culture" style="height:100px;">
+                        <img src="images/cbmm.png" alt="Center for Brains Minds and Machines, MIT" style="height:80px;">
+                        <!-- <img src="images/mas.webp" alt="MIT Media Lab, Camera Culture" style="height:90px;"> -->
+                        <img src="images/csail.png" alt="InfoLab, MIT CSAIL" style="height:90px;">
+                        <img src="images/lund.svg" alt="Lund Vision Group" style="height:90px;">
+                    </div>
+                    <p>A collaboration supported by the <a href="https://news.mit.edu/2024/mit-scholars-awarded-second-round-seed-grants-generative-ai-0328">MIT GenAI Impacts of Generative AI Grant</a>.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="content">
+            <p>Copyright 2025 Kushagra Tiwary. All rights reserved.</p>
+            <div class="links">
+                <a href="mailto:ktiwary@mit.edu,aryoung@mit.edu">Contact</a>
+                <a href="https://github.com/cambrian-org/ACI">GitHub</a>
+                <a href="#">Twitter</a>
+            </div>
+            <a href="https://accessibility.mit.edu" class="accessibility">MIT Accessibility</a>
+        </div>
+    </footer>
 </body>
 </html>
