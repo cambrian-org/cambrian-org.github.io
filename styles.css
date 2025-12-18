@@ -11,6 +11,10 @@
     --radius-md: 18px;
 }
 
+html {
+    font-size: 75%;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -237,11 +241,11 @@ h2 {
 }
 
 .section-intro.media-tone h2 {
-    color: #2f3b46;
+    color: #f15c11;
 }
 
 .section-intro.media-tone p {
-    color: #4b5965;
+    color: #3e3c3b;
 }
 
 .section-intro.align-right h2 {
