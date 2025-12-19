@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <header class="hero">
+    <header class="hero" id="top">
         <video class="hero-video" autoplay loop muted playsinline>
             <source src="videos/eye-evolution-hero.mp4" type="video/mp4" playbackRate="100">
         </video>
@@ -55,7 +55,33 @@
 
     <main>
         <section class="what-if-intro" id="about">
-            <div class="content two-column">
+            <div class="content intro-grid">
+                <aside class="toc-panel" aria-label="On-page contents">
+                    <div class="toc-header">
+                        <div class="toc-eyebrow">Contents</div>
+                        <button class="toc-toggle" type="button" aria-expanded="true" aria-controls="toc-list">
+                            <span class="sr-only">Toggle contents</span>
+                            <span class="toggle-caret" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <ol class="toc-list" id="toc-list">
+                        <li><a class="toc-link" data-target="#top" href="#top">Hero</a></li>
+                        <li><a class="toc-link" data-target="#about" href="#about">Overview</a></li>
+                        <li>
+                            <a class="toc-link" data-target="#questions" href="#questions">What-if questions</a>
+                            <ol class="toc-sublist">
+                                <li><a class="toc-link" data-target="#question-goals" href="#question-goals">Goals of vision</a></li>
+                                <li><a class="toc-link" data-target="#question-brains" href="#question-brains">Brains stayed small</a></li>
+                                <li><a class="toc-link" data-target="#question-optics" href="#question-optics">Eyes bend light</a></li>
+                            </ol>
+                        </li>
+                        <li><a class="toc-link" data-target="#publications" href="#publications">Publications</a></li>
+                        <li><a class="toc-link" data-target="#news" href="#news">News</a></li>
+                        <li><a class="toc-link" data-target="#talks" href="#talks">Talks</a></li>
+                        <li><a class="toc-link" data-target="#code" href="#code">Code</a></li>
+                        <li><a class="toc-link" data-target="#exhibitions" href="#exhibitions">Exhibitions</a></li>
+                    </ol>
+                </aside>
                 <div class="text-block">
                     <p class="section-kicker">Computationally recreating vision evolution</p>
                     <h2>A What-if Eye... Universe?</h2>
@@ -81,12 +107,17 @@
                 
                     <p>The point is to let visual intelligence, the ability to sense (hardware), percieve, reason, and act (software) in an environment, emerge as opposed to being engineered by fixed datasets and human biases.</p>
                 </div>
-                <div class="media-panel">
-                    <div style="margin-top: 100px;">
-                        <img src="images/what-if-universe.png" alt="Illustration of an alternate evolution universe" style="max-width: 950px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 16px rgba(80,90,110,0.10);">
-                    </div>
-                    <p class="media-caption" style="text-align:center; font-size:1.3rem; font-weight:600; line-height:1.5; margin-top:1.2rem;">
-                        What if Darwin had an evolution engine?
+                <div class="media-panel intro-figure">
+                    <a class="intro-figure-frame" href="images/what-if-universe.png" target="_blank" rel="noopener">
+                        <img class="intro-figure-image" src="images/what-if-universe.png" alt="Illustration of an alternate evolution universe">
+                    </a>
+                    <p class="media-caption intro-figure-caption">
+                        <span style="font-size: 1.6em; display: block;">
+                            What if Darwin had an what-if evolution machine?* 
+                        </span>
+                        <span style="font-size: 1em; display: block; margin-top:0.5em; color: #6fafef;">
+                            *Comic inspired by the <a href="https://xkcd.com/">xkcd comics</a> and <a href="https://what-if.xkcd.com/">"What-if" books</a> by Randall Munroe
+                        </span>
                     </p>
                 </div>
             </div>
@@ -100,7 +131,7 @@
                     <p>Each experiment is a hypothesis that we test in our What-If Machine. We pose a what-if question or counterfactual, evolve embodied agents inside video-game-like physics engines, and watch which eyes and behaviors emerge.</p>
                 </div>
 
-                <div class="story-block split-media wash-sky" style="--media-col: 1fr; --text-col: 0.9fr; --media-col-2: 1fr;">
+                <div class="story-block split-media wash-sky" id="question-goals" style="--media-col: 1fr; --text-col: 0.9fr; --media-col-2: 1fr;">
                     <div class="story-media">
                         <video autoplay loop muted playsinline>
                             <source src="videos/movie-S1.mp4" type="video/mp4">
@@ -122,7 +153,7 @@
 
                 </div>
 
-                <div class="story-block wash-sage" style="--media-col: 1.2fr; --text-col: 0.8fr;">
+                <div class="story-block wash-sage" id="question-brains" style="--media-col: 1.2fr; --text-col: 0.8fr;">
                     <div class="story-media">
                         <div class="media-panel" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 32px;">
                             <video autoplay loop muted playsinline style="max-width: 300px; width: 100%; height: auto; margin: 0; display: block;">
@@ -143,7 +174,7 @@
                     </div>
                 </div>
 
-                <div class="story-block reverse wash-lilac" style="--media-col: 1.2fr; --text-col: 0.8fr;">
+                <div class="story-block reverse wash-lilac" id="question-optics" style="--media-col: 1.2fr; --text-col: 0.8fr;">
                     <div class="story-text">
                         <p class="story-question">What if eyes could bend light?</p>
                         <p>When we enable optical genes, evolution repeatedly discovers lens-like optics because they solve a brutal constraint:</p>
@@ -175,7 +206,7 @@
                     <p>Explore our publications, roadmaps, talks, open-source tools, and public exhibits.</p>
                 </div>
 
-                <div class="resource-group">
+                <div class="resource-group" id="publications">
                     <h3 class="resource-subhead">Publications</h3>
                     <div class="resource-grid">
                         <article class="resource-card pastel-lilac">
@@ -258,7 +289,7 @@
                     </div>
                 </div>
 
-                <div class="resource-group">
+                <div class="resource-group" id="news">
                     <h3 class="resource-subhead">In the News</h3>
                     <div class="resource-grid">
                         <article class="resource-card pastel-sky">
@@ -272,11 +303,22 @@
                             </div>
                         </article>
 
+                        <article class="resource-card pastel-sand">
+                            <div class="resource-header">
+                                <span class="tag">MIT News</span>
+                            </div>
+                            <img class="resource-image" src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202403/MIT-GenAI-01-press_0.jpg?itok=sYOzPylJ" alt="MIT scholars awarded generative AI seed grants">
+                            <p>MIT scholars awarded a second round of seed grants for generative AI research</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://news.mit.edu/2024/mit-scholars-awarded-second-round-seed-grants-generative-ai-0328">MIT News (2024)</a>
+                            </div>
+                        </article>
+
                         <article class="resource-card pastel-sage">
                             <div class="resource-header">
                                 <span class="tag">Science News</span>
                             </div>
-                            <img class="resource-image" src="https://www.science.org/do/10.1126/science.zdvgi3s/full/_20251217_on_computer_vision.jpg" alt="Science News logo">
+                            <img class="resource-image" src="images/science-news.jpeg" alt="Science News logo">
                             <p>Why have so many different eyes evolved? Gamelike simulation could provide answers</p>
                             <div class="mini-links">
                                 <a class="mini-link" href="https://www.science.org/content/article/why-have-so-many-different-eyes-evolved-gamelike-simulation-could-provide-answers">Science News</a>
@@ -295,7 +337,7 @@
                     </div>
                 </div>
 
-                <div class="resource-group">
+                <div class="resource-group" id="talks">
                     <h3 class="resource-subhead">Talks</h3>
                     <div class="resource-grid">
                         <article class="resource-card pastel-mint">
@@ -333,7 +375,7 @@
                     </div>
                 </div>
 
-                <div class="resource-group">
+                <div class="resource-group" id="code">
                     <h3 class="resource-subhead">Code</h3>
                     <div class="resource-grid">
                         <article class="resource-card pastel-sage">
@@ -362,7 +404,7 @@
                     </div>
                 </div>
 
-                <div class="resource-group">
+                <div class="resource-group" id="exhibitions">
                     <h3 class="resource-subhead">Exhibitions</h3>
                     <div class="resource-grid resource-grid--wide">
                         <article class="resource-card pastel-peach">
@@ -398,7 +440,7 @@
             </div>
         </section>
 
-        <section class="affiliations">
+        <section class="affiliations" id="affiliations">
             <div class="content">
                 <div class="logo-row">
                     <div style="display: flex; gap: 32px; align-items: center; flex-wrap: wrap;">
@@ -428,6 +470,72 @@
             <a href="https://accessibility.mit.edu" class="accessibility">MIT Accessibility</a>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toc = document.querySelector('.floating-toc');
+            if (!toc) return;
+
+            const toggle = toc.querySelector('.toc-toggle');
+            const tocLinks = Array.from(toc.querySelectorAll('.toc-link'));
+            let autoCollapsed = false;
+
+            const setCollapsed = (collapsed) => {
+                toc.classList.toggle('is-collapsed', collapsed);
+                toggle.setAttribute('aria-expanded', (!collapsed).toString());
+            };
+
+            toggle.addEventListener('click', () => {
+                const collapsed = toc.classList.toggle('is-collapsed');
+                autoCollapsed = false;
+                toggle.setAttribute('aria-expanded', (!collapsed).toString());
+            });
+
+            const collapseOnce = () => {
+                if (!autoCollapsed && window.scrollY > 320) {
+                    setCollapsed(true);
+                    autoCollapsed = true;
+                }
+            };
+
+            window.addEventListener('scroll', collapseOnce);
+            collapseOnce();
+
+            const pairs = tocLinks
+                .map(link => {
+                    const target = document.querySelector(link.dataset.target);
+                    return target ? { link, target } : null;
+                })
+                .filter(Boolean);
+
+            const activateLink = (id) => {
+                tocLinks.forEach(link => {
+                    const isActive = link.dataset.target === `#${id}`;
+                    link.classList.toggle('is-active', isActive);
+                    if (isActive) {
+                        link.setAttribute('aria-current', 'location');
+                    } else {
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries
+                    .filter(entry => entry.isIntersecting)
+                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+                if (visible.length > 0) {
+                    activateLink(visible[0].target.id);
+                }
+            }, {
+                rootMargin: '0px 0px -55% 0px',
+                threshold: [0.2, 0.4, 0.6]
+            });
+
+            pairs.forEach(({ target }) => observer.observe(target));
+        });
+    </script>
 </body>
 
 </html>
