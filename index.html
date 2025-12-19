@@ -187,6 +187,7 @@
                             <p>The peer-reviewed publication detailing the full experimental setup, results, and evolutionary analysis.</p>
                             <div class="mini-links">
                                 <a class="mini-link" href="https://www.science.org/doi/10.1126/sciadv.ady2888">Paper (open access)</a>
+                                <a class="mini-link" href="https://eyes.mit.edu/what-if">Blog Post</a>
                                 <a class="mini-link" href="sciadv.ady2888.pdf">PDF</a>
                             </div>
                         </article>
@@ -258,18 +259,75 @@
                 </div>
 
                 <div class="resource-group">
+                    <h3 class="resource-subhead">In the News</h3>
+                    <div class="resource-grid">
+                        <article class="resource-card pastel-sky">
+                            <div class="resource-header">
+                                <span class="tag">MIT News</span>
+                            </div>
+                            <img class="resource-image" src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202512/MIT_Eye-Evolution-01_0.jpg?itok=K_ijrSP2" alt="MIT News logo">
+                            <p>A “scientific sandbox” lets researchers explore the evolution of vision systems</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://news.mit.edu/2025/scientific-sandbox-lets-researchers-explore-evolution-vision-systems-1217">MIT News</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card pastel-sage">
+                            <div class="resource-header">
+                                <span class="tag">Science News</span>
+                            </div>
+                            <img class="resource-image" src="https://www.science.org/do/10.1126/science.zdvgi3s/full/_20251217_on_computer_vision.jpg" alt="Science News logo">
+                            <p>Why have so many different eyes evolved? Gamelike simulation could provide answers</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://www.science.org/content/article/why-have-so-many-different-eyes-evolved-gamelike-simulation-could-provide-answers">Science News</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card pastel-peach">
+                            <div class="resource-header">
+                                <span class="tag">Hacker News</span>
+                            </div>
+                            <img class="resource-image" src="https://news.ycombinator.com/favicon.ico" alt="Hacker News logo">
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://news.ycombinator.com/item?id=43043063">Y Combinator</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="resource-group">
                     <h3 class="resource-subhead">Talks</h3>
                     <div class="resource-grid">
                         <article class="resource-card pastel-mint">
                             <div class="resource-header">
-                                <h4>Redwood Talk</h4>
-                                <span class="tag">Talk</span>
+                                <span class="tag">UC Berkeley</span>
                             </div>
-                            <img class="resource-image" src="images/redwood-recording.png" alt="Redwood talk figure">
-                            <p>Highlights from a talk at UC Berkeley's Redwood Center.</p>
+                            <img class="resource-image" src="images/redwood-recording.png" alt="Redwood Talk at UC Berkeley">
+                            <p>Highlights from a talk at UC Berkeley's Redwood Center by Kushagra Tiwary. Covers the project vision and open research questions.</p>
                             <div class="mini-links">
-                                <a class="mini-link" href="https://redwood.berkeley.edu/seminars/kushagra-tiwary-june-2025">UC Berkeley Talk </a>
-                                <a class="mini-link" href="https://www.youtube.com/watch?v=OuPwGkzh6nM">Tedx Talk </a>
+                                <a class="mini-link" href="https://redwood.berkeley.edu/seminars/kushagra-tiwary-june-2025">Talk Details</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card pastel-peach">
+                            <div class="resource-header">
+                                <span class="tag">Tedx Talk</span>
+                            </div>
+                            <img class="resource-image" src="https://img.youtube.com/vi/OuPwGkzh6nM/hqdefault.jpg" alt="Tedx Talk Thumbnail">
+                            <p>Tedx talk exploring the broader implications of evolving visual intelligence with artificial agents.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://www.youtube.com/watch?v=OuPwGkzh6nM">Watch Video</a>
+                            </div>
+                        </article>
+
+                        <article class="resource-card pastel-sky">
+                            <div class="resource-header">
+                                <span class="tag">Coming Soon</span>
+                            </div>
+                            <!-- <img class="resource-image" src="images/talk-coming-soon.png" alt="Placeholder for upcoming talk" style="opacity: 0.7;"> -->
+                            <p>More talks and presentations are on their way! Stay tuned for upcoming speaking events and recordings.</p>
+                            <div class="mini-links">
+                                <span class="mini-link">Coming soon</span>
                             </div>
                         </article>
                     </div>
@@ -314,6 +372,20 @@
                             </div>
                             <video autoplay loop muted playsinline style="max-width: 100%; width: 100%; height: auto; margin: 0; display: block;">
                                 <source src="videos/firstsignsofvision-exhibition.mp4" type="video/mp4">
+                                <track kind="captions">
+                                <script>
+                                    // 10x speed video play
+                                    document.addEventListener("DOMContentLoaded", function () {
+                                        var videos = document.querySelectorAll('video');
+                                        videos.forEach(function(video) {
+                                            // Find the desired <source>
+                                            var source = Array.from(video.getElementsByTagName('source')).find(src => src.src.includes("firstsignsofvision-exhibition"));
+                                            if (source) {
+                                                video.playbackRate = 10.0;
+                                            }
+                                        });
+                                    });
+                                </script>
                             </video>
                             <p>How can we interact with evolution? Our exhibitions let visitors experience evolving vision in a hands-on way.</p>
                             <div class="mini-links">
