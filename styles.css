@@ -563,6 +563,8 @@ h2 {
 
 .story {
     background: linear-gradient(180deg, #eef3f7 0%, #f7fafc 100%);
+    position: relative;
+    isolation: isolate;
 }
 
 .story-block {
@@ -582,7 +584,7 @@ h2 {
 .story-block::before {
     content: "";
     position: absolute;
-    inset: -2.5rem -6vw;
+    inset: -2.5rem 0;
     background: radial-gradient(circle at 20% 50%, var(--wash-color, #e6ebf2) 0%, rgba(255, 255, 255, 0) 70%);
     opacity: 0.8;
     z-index: 0;
@@ -594,6 +596,16 @@ h2 {
 
 .story-block.reverse::before {
     background: radial-gradient(circle at 80% 50%, var(--wash-color, #e6ebf2) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+/* Remove the internal wash color for the optics block */
+#question-optics::before {
+    content: none;
+}
+
+/* Disable wash overlay for all story sections */
+.story-block::before {
+    content: none;
 }
 
 .story-media,
@@ -1026,7 +1038,7 @@ footer a:hover {
 
     .story-block::before,
     .story-block.reverse::before {
-        inset: -2rem -3vw;
+        inset: -2rem 0;
     }
 
     /* On mobile, let items stack in DOM order instead of forcing fixed columns */

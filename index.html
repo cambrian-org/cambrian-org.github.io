@@ -75,7 +75,7 @@
                         </ol>
                     </li>
                     <li><a class="toc-link" data-target="#publications" href="#publications">Publications</a></li>
-                    <li><a class="toc-link" data-target="#news" href="#news">News</a></li>
+                    <li><a class="toc-link" data-target="#news" href="#news">Press Coverage</a></li>
                     <li><a class="toc-link" data-target="#talks" href="#talks">Talks</a></li>
                     <li><a class="toc-link" data-target="#code" href="#code">Code</a></li>
                     <li><a class="toc-link" data-target="#exhibitions" href="#exhibitions">Exhibitions</a></li>
@@ -129,7 +129,7 @@
         <section class="story" id="questions">
             <div class="content">
                 <div class="section-intro align-center media-tone">
-                    <h2>What-if questions about vision, answered by evolving agents</h2>
+                    <h2>What-if questions about vision, answered by evolving AI agents</h2>
                     <p>Each experiment is a hypothesis that we test in our What-If Machine. We pose a what-if question or counterfactual, evolve embodied agents inside video-game-like physics engines, and watch which eyes and behaviors emerge.</p>
                 </div>
 
@@ -326,7 +326,7 @@
                 </div>
 
                 <div class="resource-group" id="news">
-                    <h3 class="resource-subhead">In the News</h3>
+                    <h3 class="resource-subhead">Press Coverage</h3>
                     <div class="resource-grid">
                         <article class="resource-card pastel-sky">
                             <div class="resource-header">
@@ -370,6 +370,17 @@
                                 <a class="mini-link" href="https://news.ycombinator.com/item?id=43043063">Y Combinator</a>
                             </div>
                         </article>
+                        <article class="resource-card pastel-peach">
+                            <div class="resource-header">
+                                <span class="tag">Forbes News</span>
+                            </div>
+                            <img class="resource-image" src="https://imageio.forbes.com/specials-images/imageserve/679a5d9bb8e9823c0c29bc6f/Neuron-system/0x0.jpg?width=960&dpr=1" alt="Forbes logo">
+                            <p>Beyond computer vision: brains in jars and how they see.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://www.forbes.com/sites/johnwerner/2025/07/02/beyond-computer-vision-brains-in-jars-and-how-they-see/">Forbes</a>
+                            </div>
+                        </article>
+                        
                     </div>
                 </div>
 
@@ -559,10 +570,18 @@
 
                 if (visible.length > 0) {
                     activateLink(visible[0].target.id);
+                } else {
+                    // Fallback: find the last section above the viewport midpoint
+                    const viewportMid = window.scrollY + window.innerHeight * 0.4;
+                    const best = pairs
+                        .map(({ target }) => ({ id: target.id, top: target.getBoundingClientRect().top + window.scrollY }))
+                        .filter(s => s.top <= viewportMid)
+                        .sort((a, b) => b.top - a.top)[0];
+                    if (best) activateLink(best.id);
                 }
             }, {
-                rootMargin: '0px 0px -55% 0px',
-                threshold: [0.2, 0.4, 0.6]
+                rootMargin: '-25% 0px -55% 0px',
+                threshold: [0.1, 0.3, 0.5, 0.7, 0.9]
             });
 
             pairs.forEach(({ target }) => observer.observe(target));
