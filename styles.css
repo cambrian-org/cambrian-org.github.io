@@ -218,6 +218,22 @@ h2 {
     align-items: start;
 }
 
+.page-layout {
+    display: grid;
+    grid-template-columns: minmax(230px, 280px) minmax(0, 1fr);
+    gap: 2.4rem 3rem;
+    align-items: start;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 2.5rem 5rem;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
 .toc-panel {
     width: 100%;
     max-width: 320px;
@@ -228,10 +244,29 @@ h2 {
     border-radius: 18px;
     backdrop-filter: blur(8px);
     transition: box-shadow 0.25s ease, opacity 0.25s ease, max-height 0.3s ease, padding 0.2s ease;
+    position: sticky;
+    top: 2.5rem;
+    align-self: start;
+    max-height: calc(100vh - 2rem);
+    overflow: auto;
 }
 
-.intro-grid .toc-panel {
+/* .toc-panel.is-fixed { fixed behavior removed } */
+
+.intro-grid .toc-panel,
+.page-layout .toc-panel--page {
     justify-self: start;
+}
+
+.page-layout .toc-panel--page {
+    top: 3.5rem; /* nudge down a bit on main page layout */
+}
+
+.intro-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 2.5rem;
+    align-items: start;
 }
 
 .intro-figure {
@@ -951,6 +986,10 @@ footer a:hover {
 
     .intro-grid .toc-panel {
         max-width: 100%;
+        position: static;
+        top: auto;
+        max-height: none;
+        overflow: visible;
     }
 
     .intro-figure-frame {
@@ -990,6 +1029,35 @@ footer a:hover {
         inset: -2rem -3vw;
     }
 
+    /* On mobile, let items stack in DOM order instead of forcing fixed columns */
+    .story-block .story-media,
+    .story-block .story-text,
+    .story-block.reverse .story-media,
+    .story-block.reverse .story-text,
+    .story-block.split-media .story-media,
+    .story-block.split-media .story-text {
+        grid-column: auto;
+    }
+
+    .page-layout {
+        grid-template-columns: 1fr;
+        padding: 0 1.5rem 4rem;
+    }
+
+    .page-layout .toc-panel--page {
+        position: static;
+        max-height: none;
+        width: 100%;
+    }
+
+    .intro-body {
+        grid-template-columns: 1fr;
+    }
+
+    .page-content {
+        gap: 3rem;
+    }
+
     .story-block.text-over {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -1011,6 +1079,19 @@ footer a:hover {
 
     .media-caption--single {
         white-space: normal;
+    }
+
+    /* Stack the two videos vertically in the goals section on mobile */
+    #question-goals .media-row {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 12px;
+        align-items: center;
+    }
+
+    #question-goals .media-row video {
+        width: 100%;
+        max-width: 100%;
     }
 
     #question-brains .brains-layout {
