@@ -125,56 +125,89 @@
 
 
         <section class="story" id="questions">
-            <div class="content content-wide">
+            <div class="content">
                 <div class="section-intro align-center media-tone">
                     <h2>What-if questions about vision, answered by evolving agents</h2>
                     <p>Each experiment is a hypothesis that we test in our What-If Machine. We pose a what-if question or counterfactual, evolve embodied agents inside video-game-like physics engines, and watch which eyes and behaviors emerge.</p>
                 </div>
 
-                <div class="story-block split-media wash-sky" id="question-goals" style="--media-col: 1fr; --text-col: 0.9fr; --media-col-2: 1fr;">
-                    <div class="story-media">
-                        <video autoplay loop muted playsinline>
-                            <source src="videos/movie-S1.mp4" type="video/mp4">
-                        </video>
-                        <p class="media-caption"><b>Detection of food from poison</b> pressures agents to evolve towards high-acuity, forward-facing camera-like eyes.</p>
-                    </div>
+                <div class="story-block reverse wash-sky text-left" id="question-goals" style="--media-col: 1fr; --text-col: 0.9fr;">
                     <div class="story-text">
                         <p class="story-question story-question--compact">What if the goals of vision were different?</p>
                         <!-- <p class="story-question story-question--compact">What if vision were only used for navigation or detection?</p> -->
-                        <p>We start with one light-sensing cell and evolve visuo-motor control in a world with only one task: <b>Detection</b> or <b>Obstacle Avoidance</b>.
-                           </p>
+                        <p>
+                            We initialize our agents with one light-sensing cell and a small brain and evolve their visual intelligence
+                            in a world with only two tasks:
+                        </p>
+                        <ol>
+                            <li><b>NAVIGATION</b> where the goal is to move as fast as possible to the left while avoiding obstacles (walls of the maze).</li>
+                            <li><b>DETECTION</b> where the goal is to detect the food and avoid the poison.</li>
+                        </ol>
                     </div>
                     <div class="story-media">
-                        <video autoplay loop muted playsinline>
-                            <source src="videos/movie-S2.mp4" type="video/mp4">
-                        </video>
-                        <p class="media-caption"><b>Navigation/orientation</b> pressures agents to evolve distributed, compound/eyelet-like vision (wide coverage)</p>
+                        <div class="media-panel media-row">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/navigation.mp4" type="video/mp4">
+                            </video>
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/movie-S2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="media-caption">
+                            <b>Navigation</b> agents favor distributed, wide-coverage vision.
+                        </p>
                     </div>
+
+                    <div class="story-media">
+                        <div class="media-panel media-row">
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/detection.mp4" type="video/mp4">
+                            </video>
+                            <video autoplay loop muted playsinline>
+                                <source src="videos/movie-S2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="media-caption"><b>Detection</b> favors high-acuity, forward-facing camera-like eyes.</p>
+                    </div>
+
 
                 </div>
 
-                <div class="story-block wash-sage" id="question-brains" style="--media-col: 1.2fr; --text-col: 0.8fr;">
+                <div class="story-block reverse wash-sage" id="question-brains" style="--media-col: 1fr; --text-col: 0.9fr;">
+                    <div class="story-text">
+                        <p class="story-question">What if brains stayed small throughout evolution?</p>
+                        <p>When we systematically scale eyes and brain size at the same time, we uncover power-law scaling between neural capacity and task performance — but only when visual acuity scales too. If acuity is bottlenecked, scaling the “brain” alone stops buying better behavior.</p>
+                    </div>
                     <div class="story-media">
-                        <div class="media-panel" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 32px;">
-                            <video autoplay loop muted playsinline style="max-width: 300px; width: 100%; height: auto; margin: 0; display: block;">
-                                <source src="videos/section2p5_detection.mp4" type="video/mp4">
-                            </video>
-                            <!-- Arrow SVG pointing right -->
-                            <svg style="margin: 0 16px;" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-                                <path d="M6 24h32m0 0l-12-12m12 12l-12 12" stroke="#4B5970" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <img src="images/det-scaling.png" alt="Detection scaling plot" style="max-width: 300px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 16px rgba(80,90,110,0.10);">
+                        <div class="media-panel ai-panel">
+                            <img class="ai-scaling-figure" src="images/ai-scaling.png" alt="AI scaling laws figure">
+                            <p class="media-caption">Scaling laws in AI (Kaplan et&nbsp;al., 2020) relate test loss to compute, dataset size, and parameters, without accounting for an agent’s visual acuity. In embodied settings, we show that acuity matters because it compresses the representation the agent receives from the world.</p>
                         </div>
                     </div>
                     <div class="story-text">
-                        <p class="story-question">What if brains stayed small throughout evolution?</p>
-                        <p>When we systematically scale eyes and brain size at the same time, we uncover power-law scaling between neural capacity and task performance — but only when visual acuity scales too. 
-                            If acuity is bottlenecked, scaling the “brain” alone stops buying better behavior.
-                        </p>
+                        <div class="media-panel">
+                            <img class="bio-scaling-figure" src="images/biological-scaling-law.png" alt="Biological scaling laws figure">
+                            <p class="media-caption">In biology, we observe scaling between eyes and brains across animals. Figure from "The scaling of eye size in adult birds: Relationship to brain, head and body sizes" (Richard Burton). We show that this scaling behavior can be reproduced with our agents.</p>
+                        </div>
+                    </div>
+                    <div class="story-media">
+                        <div class="media-panel">
+                            <div class="media-row brains-video">
+                                <video autoplay loop muted playsinline>
+                                    <source src="videos/section2p5_detection.mp4" type="video/mp4">
+                                </video>
+                                <!-- Arrow SVG pointing right -->
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                    <path d="M6 24h32m0 0l-12-12m12 12l-12 12" stroke="#4B5970" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <img src="images/detection-scaling-2.png" alt="Detection scaling plot">
+                            </div>
+                            <p class="media-caption media-caption--single"><b>Scaling detection performance as eyes and brains grow together.</b> Each blue line represents agents trained with the same visual acuity but larger number of parameters. Darker blue lines represent higher visual acuity.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="story-block reverse wash-lilac" id="question-optics" style="--media-col: 1.2fr; --text-col: 0.8fr;">
+                <div class="story-block reverse wash-lilac" id="question-optics" style="--media-col: 1.1fr; --text-col: 0.9fr;">
                     <div class="story-text">
                         <p class="story-question">What if eyes could bend light?</p>
                         <p>When we enable optical genes, evolution repeatedly discovers lens-like optics because they solve a brutal constraint:</p>
@@ -182,16 +215,22 @@
                             <li><b>Without optics</b>, systems hit a hard ceiling — pinhole strategies can sharpen images only by sacrificing light.</li>
                             <li><b>With optics</b>, lenses emerge as a solution to the fundamental tradeoff between light collection and spatial precision.</li>
                         </ul>
-                        <div class="media-panel" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 32px;">
-                            <video autoplay loop muted playsinline style="max-width: auto; width: 100%; height: auto; margin: 0; display: block; object-fit: contain;">
-                                <source src="videos/section2p4_movie.mp4" type="video/mp4">
-                            </video>
+                        <div class="media-panel" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 12px;">
+                            <img src="images/pupil2-nobg.png" alt="Pupil experiment visualization"
+                                 style="width: 100%; height: auto; max-width: 360px; border-radius: 12px; box-shadow: 0 2px 16px rgba(80,90,110,0.10);">
+                            <p class="media-caption" style="max-width: 480px; margin-top: 0.2rem; text-align: center;">
+                                Optics evolve from open → cup → pinhole → unfocused lens → focused lens. Lenses preserve spatial precision while allowing larger pupils for more light.
+                            </p>
                         </div>
                     </div>
                     <div class="story-media">
-                        <div class="media-panel" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 32px;">
-                            <img src="images/pupil2-nobg.png" alt="Pupil experiment visualization"
-                                 style="width: auto; height: auto; max-width: 400px; border-radius: 12px; box-shadow: 0 2px 16px rgba(80,90,110,0.10);">
+                        <div class="media-panel" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 12px;">
+                            <video autoplay loop muted playsinline style="max-width: 560px; width: 100%; height: auto; margin: 0; display: block; object-fit: contain;">
+                                <source src="videos/section2p4_movie.mp4" type="video/mp4">
+                            </video>
+                            <p class="media-caption" style="max-width: 520px; margin-top: 0.2rem;">
+                                With lenses (≈gen 30), pupil size increases while precision is maintained, pushing image quality beyond the pinhole ceiling.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -473,7 +512,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const toc = document.querySelector('.floating-toc');
+            const toc = document.querySelector('.toc-panel');
             if (!toc) return;
 
             const toggle = toc.querySelector('.toc-toggle');
