@@ -258,10 +258,6 @@ h2 {
     justify-self: start;
 }
 
-.page-layout .toc-panel--page {
-    top: 3.5rem; /* nudge down a bit on main page layout */
-}
-
 .intro-body {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
@@ -563,21 +559,79 @@ h2 {
 
 .story {
     background: linear-gradient(180deg, #eef3f7 0%, #f7fafc 100%);
-    position: relative;
-    isolation: isolate;
 }
 
 .story-block {
     position: relative;
-    display: grid;
-    grid-template-columns: var(--media-col, 1.1fr) var(--text-col, 0.9fr);
-    gap: 3.5rem;
-    align-items: center;
     padding: 2.5rem 0;
     margin-bottom: 2.5rem;
 }
 
-.story-block.split-media {
+.story-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    cursor: pointer;
+    list-style: none;
+    padding: 0.4rem 2.25rem 0.4rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.story-summary::-webkit-details-marker {
+    display: none;
+}
+
+.story-summary::marker {
+    content: "";
+}
+
+.story-summary .story-question {
+    margin: 0;
+    display: block;
+}
+
+.story-summary:focus-visible {
+    outline: 2px solid rgba(184, 101, 75, 0.45);
+    outline-offset: 6px;
+    border-radius: 12px;
+}
+
+.story-caret {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    color: var(--accent-dark);
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.story-block[open] .story-caret {
+    transform: rotate(225deg);
+}
+
+.story-block-body {
+    display: grid;
+    grid-template-columns: var(--media-col, 1.1fr) var(--text-col, 0.9fr);
+    gap: 1.8rem 3.5rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.story-block[open] .story-summary {
+    margin-bottom: 1.6rem;
+}
+
+.story-block:not([open]) .story-block-body {
+    display: none;
+}
+
+.story-block.split-media .story-block-body {
     grid-template-columns: var(--media-col, 1fr) var(--text-col, 0.9fr) var(--media-col-2, 1fr);
 }
 
@@ -590,22 +644,12 @@ h2 {
     z-index: 0;
 }
 
-.story-block.reverse {
+.story-block.reverse .story-block-body {
     grid-template-columns: var(--text-col, 0.9fr) var(--media-col, 1.1fr);
 }
 
 .story-block.reverse::before {
     background: radial-gradient(circle at 80% 50%, var(--wash-color, #e6ebf2) 0%, rgba(255, 255, 255, 0) 70%);
-}
-
-/* Remove the internal wash color for the optics block */
-#question-optics::before {
-    content: none;
-}
-
-/* Disable wash overlay for all story sections */
-.story-block::before {
-    content: none;
 }
 
 .story-media,
@@ -647,6 +691,11 @@ h2 {
     grid-column: 1;
 }
 
+.story-block .story-text.story-span,
+.story-block .story-media.story-span {
+    grid-column: 1 / -1;
+}
+
 .media-row {
     display: flex;
     flex-direction: row;
@@ -665,6 +714,16 @@ h2 {
     display: block;
     border-radius: 12px;
     box-shadow: 0 2px 16px rgba(80, 90, 110, 0.1);
+}
+
+.evolving-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.evolving-row video {
+    max-width: 100%;
 }
 
 .media-row svg {
@@ -718,6 +777,12 @@ h2 {
     object-fit: contain;
 }
 
+.genotype-figure {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 .story-block.text-right .story-text {
     text-align: right;
     justify-self: end;
@@ -737,7 +802,7 @@ h2 {
     margin-right: auto;
 }
 
-.story-block.text-over {
+.story-block.text-over .story-block-body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-areas:
         "text text"
@@ -756,7 +821,7 @@ h2 {
     justify-self: center;
 }
 
-.story-block.split-media.text-over {
+.story-block.split-media.text-over .story-block-body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-areas:
         "text text"
@@ -1023,22 +1088,22 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 
-    .story-block {
+    .story-block-body {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
 
-    .story-block.split-media {
+    .story-block.split-media .story-block-body {
         grid-template-columns: 1fr;
     }
 
-    .story-block.reverse {
+    .story-block.reverse .story-block-body {
         grid-template-columns: 1fr;
     }
 
     .story-block::before,
     .story-block.reverse::before {
-        inset: -2rem 0;
+        inset: -2rem -3vw;
     }
 
     /* On mobile, let items stack in DOM order instead of forcing fixed columns */
@@ -1070,14 +1135,14 @@ footer a:hover {
         gap: 3rem;
     }
 
-    .story-block.text-over {
+    .story-block.text-over .story-block-body {
         grid-template-columns: 1fr;
         grid-template-areas:
             "text"
             "media";
     }
 
-    .story-block.split-media.text-over {
+    .story-block.split-media.text-over .story-block-body {
         grid-template-columns: 1fr;
         grid-template-areas:
             "text"

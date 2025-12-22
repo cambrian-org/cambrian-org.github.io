@@ -67,11 +67,12 @@
                     <li><a class="toc-link" data-target="#top" href="#top">Hero</a></li>
                     <li><a class="toc-link" data-target="#about" href="#about">Overview</a></li>
                     <li>
-                        <a class="toc-link" data-target="#questions" href="#questions">What-if questions</a>
+                        <a class="toc-link" data-target="#questions" href="#questions">What-if questions (FAQ)</a>
                         <ol class="toc-sublist">
                             <li><a class="toc-link" data-target="#question-goals" href="#question-goals">Goals of vision</a></li>
                             <li><a class="toc-link" data-target="#question-brains" href="#question-brains">Brains stayed small</a></li>
                             <li><a class="toc-link" data-target="#question-optics" href="#question-optics">Eyes bend light</a></li>
+                            <li><a class="toc-link" data-target="#question-genotype" href="#question-genotype">Genotype for vision and learning</a></li>
                         </ol>
                     </li>
                     <li><a class="toc-link" data-target="#publications" href="#publications">Publications</a></li>
@@ -129,109 +130,159 @@
         <section class="story" id="questions">
             <div class="content">
                 <div class="section-intro align-center media-tone">
-                    <h2>What-if questions about vision, answered by evolving AI agents</h2>
+                    <h2>What if questions about vision, answered by evolving AI agents</h2>
                     <p>Each experiment is a hypothesis that we test in our What-If Machine. We pose a what-if question or counterfactual, evolve embodied agents inside video-game-like physics engines, and watch which eyes and behaviors emerge.</p>
                 </div>
 
-                <div class="story-block reverse wash-sky text-left" id="question-goals" style="--media-col: 1fr; --text-col: 0.9fr;">
-                    <div class="story-text">
-                        <p class="story-question story-question--compact">What if the goals of vision were different?</p>
-                        <!-- <p class="story-question story-question--compact">What if vision were only used for navigation or detection?</p> -->
-                        <p>
-                            We initialize our agents with one light-sensing cell and a small brain and evolve their visual intelligence
-                            in a world with only two tasks:
-                        </p>
-                        <ol>
-                            <li><b>NAVIGATION</b> where the goal is to move as fast as possible to the left while avoiding obstacles (walls of the maze).</li>
-                            <li><b>DETECTION</b> where the goal is to detect the food and avoid the poison.</li>
-                        </ol>
-                    </div>
-                    <div class="story-media">
-                        <div class="media-panel media-row">
-                            <video autoplay loop muted playsinline>
-                                <source src="videos/navigation.mp4" type="video/mp4">
-                            </video>
-                            <video autoplay loop muted playsinline>
-                                <source src="videos/movie-S2.mp4" type="video/mp4">
-                            </video>
+                <details class="story-block reverse wash-sky text-left" id="question-goals" style="--media-col: 1fr; --text-col: 0.9fr;">
+                    <summary class="story-summary">
+                        <span class="story-question story-question--compact" role="heading" aria-level="3">What if the goals of vision were different?</span>
+                        <span class="story-caret" aria-hidden="true"></span>
+                    </summary>
+                    <div class="story-block-body">
+                        <div class="story-text">
+                            <!-- <p class="story-question story-question--compact">What if vision were only used for navigation or detection?</p> -->
+                            <p>
+                                We initialize our agents with one light-sensing cell and a small brain and evolve their visual intelligence
+                                in a world with only two tasks:
+                            </p>
+                            <ol>
+                                <li><b>NAVIGATION</b> where the goal is to move as fast as possible to the left while avoiding obstacles (walls of the maze).</li>
+                                <li><b>DETECTION</b> where the goal is to detect the food and avoid the poison.</li>
+                            </ol>
                         </div>
-                        <p class="media-caption">
-                            <b>Navigation</b> agents favor distributed, wide-coverage vision.
-                        </p>
-                    </div>
-
-                    <div class="story-media">
-                        <div class="media-panel media-row">
-                            <video autoplay loop muted playsinline>
-                                <source src="videos/detection.mp4" type="video/mp4">
-                            </video>
-                            <video autoplay loop muted playsinline>
-                                <source src="videos/movie-S2.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <p class="media-caption"><b>Detection</b> favors high-acuity, forward-facing camera-like eyes.</p>
-                    </div>
-
-
-                </div>
-
-                <div class="story-block reverse wash-sage" id="question-brains" style="--media-col: 1fr; --text-col: 0.9fr;">
-                    <div class="story-text">
-                        <p class="story-question">What if brains stayed small throughout evolution?</p>
-                        <p>When we systematically scale eyes and brain size at the same time, we uncover power-law scaling between neural capacity and task performance — but only when visual acuity scales too. If acuity is bottlenecked, scaling the “brain” alone stops buying better behavior.</p>
-                    </div>
-                    <div class="story-media">
-                        <div class="media-panel ai-panel">
-                            <img class="ai-scaling-figure" src="images/ai-scaling.png" alt="AI scaling laws figure">
-                            <p class="media-caption">Scaling laws in AI (Kaplan et&nbsp;al., 2020) relate test loss to compute, dataset size, and parameters, without accounting for an agent’s visual acuity. In embodied settings, we show that acuity matters because it compresses the representation the agent receives from the world.</p>
-                        </div>
-                    </div>
-                    <div class="story-text">
-                        <div class="media-panel">
-                            <img class="bio-scaling-figure" src="images/biological-scaling-law.png" alt="Biological scaling laws figure">
-                            <p class="media-caption">In biology, we observe scaling between eyes and brains across animals. Figure from "The scaling of eye size in adult birds: Relationship to brain, head and body sizes" (Richard Burton). We show that this scaling behavior can be reproduced with our agents.</p>
-                        </div>
-                    </div>
-                    <div class="story-media">
-                        <div class="media-panel">
-                            <div class="media-row brains-video">
+                        <div class="story-media">
+                            <div class="media-panel media-row">
                                 <video autoplay loop muted playsinline>
-                                    <source src="videos/section2p5_detection.mp4" type="video/mp4">
+                                    <source src="videos/navigation.mp4" type="video/mp4">
                                 </video>
-                                <img src="images/detection-scaling-2.png" alt="Detection scaling plot">
+                                <video autoplay loop muted playsinline>
+                                    <source src="videos/movie-S2.mp4" type="video/mp4">
+                                </video>
                             </div>
-                            <p class="media-caption media-caption--single"><b>Scaling detection performance as eyes and brains grow together.</b> Each blue line represents agents trained with the same visual acuity but larger number of parameters. Darker blue lines represent higher visual acuity.</p>
+                            <p class="media-caption">
+                                <b>Navigation</b> agents favor distributed, wide-coverage vision.
+                            </p>
                         </div>
-                    </div>
-                </div>
 
-                <div class="story-block reverse wash-lilac" id="question-optics" style="--media-col: 1.1fr; --text-col: 0.9fr;">
-                    <div class="story-text">
-                        <p class="story-question">What if eyes could bend light?</p>
-                        <p>When we enable optical genes, evolution repeatedly discovers lens-like optics because they solve a brutal constraint:</p>
-                        <ul>
-                            <li><b>Without optics</b>, systems hit a hard ceiling — pinhole strategies can sharpen images only by sacrificing light.</li>
-                            <li><b>With optics</b>, lenses emerge as a solution to the fundamental tradeoff between light collection and spatial precision.</li>
-                        </ul>
-                        <div class="media-panel" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 12px;">
-                            <img src="images/pupil2-nobg.png" alt="Pupil experiment visualization"
-                                 style="width: 100%; height: auto; max-width: 360px; border-radius: 12px; box-shadow: 0 2px 16px rgba(80,90,110,0.10);">
-                            <p class="media-caption" style="max-width: 480px; margin-top: 0.2rem; text-align: center;">
-                                Optics evolve from open → cup → pinhole → unfocused lens → focused lens. Lenses preserve spatial precision while allowing larger pupils for more light.
-                            </p>
+                        <div class="story-media">
+                            <div class="media-panel media-row">
+                                <video autoplay loop muted playsinline>
+                                    <source src="videos/detection.mp4" type="video/mp4">
+                                </video>
+                                <video autoplay loop muted playsinline>
+                                    <source src="videos/movie-S2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <p class="media-caption"><b>Detection</b> favors high-acuity, forward-facing camera-like eyes.</p>
                         </div>
                     </div>
-                    <div class="story-media">
-                        <div class="media-panel" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 12px;">
-                            <video autoplay loop muted playsinline style="max-width: 560px; width: 100%; height: auto; margin: 0; display: block; object-fit: contain;">
-                                <source src="videos/section2p4_movie.mp4" type="video/mp4">
-                            </video>
-                            <p class="media-caption" style="max-width: 520px; margin-top: 0.2rem;">
-                                The yellow frustrum indicates the light being collected by the eye. The pinhole eye collects less light but has higher reward than the open eye. Once the agents evolve lenses, they can collect more light and have higher acuity so they learn more robust behaviors as a result.
-                            </p>
+                </details>
+
+                <details class="story-block reverse wash-sage" id="question-brains" style="--media-col: 1fr; --text-col: 0.9fr;">
+                    <summary class="story-summary">
+                        <span class="story-question" role="heading" aria-level="3">What if brains stayed small throughout evolution?</span>
+                        <span class="story-caret" aria-hidden="true"></span>
+                    </summary>
+                    <div class="story-block-body">
+                        <div class="story-text">
+                            <p>When we systematically scale eyes and brain size at the same time, we uncover power-law scaling between neural capacity and task performance — but only when visual acuity scales too. If acuity is bottlenecked, scaling the “brain” alone stops buying better behavior.</p>
+                        </div>
+                        <div class="story-media">
+                            <div class="media-panel ai-panel">
+                                <img class="ai-scaling-figure" src="images/ai-scaling.png" alt="AI scaling laws figure">
+                                <p class="media-caption">Scaling laws in AI (Kaplan et&nbsp;al., 2020) relate test loss to compute, dataset size, and parameters, without accounting for an agent’s visual acuity. In embodied settings, we show that acuity matters because it compresses the representation the agent receives from the world.</p>
+                            </div>
+                        </div>
+                        <div class="story-text">
+                            <div class="media-panel">
+                                <img class="bio-scaling-figure" src="images/biological-scaling-law.png" alt="Biological scaling laws figure">
+                                <p class="media-caption">In biology, we observe scaling between eyes and brains across animals. Figure from "The scaling of eye size in adult birds: Relationship to brain, head and body sizes" (Richard Burton). We show that this scaling behavior can be reproduced with our agents.</p>
+                            </div>
+                        </div>
+                        <div class="story-media">
+                            <div class="media-panel">
+                                <div class="media-row brains-video">
+                                    <video autoplay loop muted playsinline>
+                                        <source src="videos/section2p5_detection.mp4" type="video/mp4">
+                                    </video>
+                                    <img src="images/detection-scaling-2.png" alt="Detection scaling plot">
+                                </div>
+                                <p class="media-caption media-caption--single"><b>Scaling detection performance as eyes and brains grow together.</b> Each blue line represents agents trained with the same visual acuity but larger number of parameters. Darker blue lines represent higher visual acuity.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </details>
+
+                <details class="story-block reverse wash-lilac" id="question-optics" style="--media-col: 1.1fr; --text-col: 0.9fr;">
+                    <summary class="story-summary">
+                        <span class="story-question" role="heading" aria-level="3">What if eyes could bend light?</span>
+                        <span class="story-caret" aria-hidden="true"></span>
+                    </summary>
+                    <div class="story-block-body">
+                        <div class="story-text">
+                            <p>When we enable optical genes, evolution repeatedly discovers lens-like optics because they solve a brutal constraint:</p>
+                            <ul>
+                                <li><b>Without optics</b>, systems hit a hard ceiling — pinhole strategies can sharpen images only by sacrificing light.</li>
+                                <li><b>With optics</b>, lenses emerge as a solution to the fundamental tradeoff between light collection and spatial precision.</li>
+                            </ul>
+                            <div class="media-panel" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 12px;">
+                                <img src="images/pupil2-nobg.png" alt="Pupil experiment visualization"
+                                     style="width: 100%; height: auto; max-width: 360px; border-radius: 12px; box-shadow: 0 2px 16px rgba(80,90,110,0.10);">
+                                <p class="media-caption" style="max-width: 480px; margin-top: 0.2rem; text-align: center;">
+                                    Optics evolve from open → cup → pinhole → unfocused lens → focused lens. Lenses preserve spatial precision while allowing larger pupils for more light.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="story-media">
+                            <div class="media-panel" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 12px;">
+                                <video autoplay loop muted playsinline style="max-width: 560px; width: 100%; height: auto; margin: 0; display: block; object-fit: contain;">
+                                    <source src="videos/section2p4_movie.mp4" type="video/mp4">
+                                </video>
+                                <p class="media-caption" style="max-width: 520px; margin-top: 0.2rem;">
+                                    The yellow frustrum indicates the light being collected by the eye. The pinhole eye collects less light but has higher reward than the open eye. Once the agents evolve lenses, they can collect more light and have higher acuity so they learn more robust behaviors as a result.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="story-block reverse wash-peach" id="question-genotype" style="--media-col: 1.1fr; --text-col: 0.9fr;">
+                    <summary class="story-summary">
+                        <span class="story-question" role="heading" aria-level="3">Unifying Genotype for Vision and Learning</span>
+                        <span class="story-caret" aria-hidden="true"></span>
+                    </summary>
+                    <div class="story-block-body">
+                        <div class="story-text story-span">
+                            <div class="media-panel">
+                                <img class="genotype-figure" src="images/genotype.png" alt="Genotype for vision and learning diagram">
+                            </div>
+                        </div>
+                        <div class="story-text story-span">
+                            <p>We create a unifying genotype that includes components of the hardware (physical vision sensor) and the learning components (software). 
+                                The encoding splits vision into three independently mutable gene clusters. <b>Morphological genes</b> set spatial sampling traits like eye placement and field of view. <b>Optical genes</b> govern light interaction (photoreceptor count, optical elements, pupil size). <b>Neural genes</b> specify learning capacity. This separation lets mutations explore realistic evolutionary pathways.</p>
+                        </div>
+                        <div class="story-media story-span">
+                            <div class="media-panel">
+                                <div class="media-row evolving-row">
+                                    <video autoplay loop muted playsinline>
+                                        <source src="videos/eyes-evolving.mp4" type="video/mp4">
+                                    </video>
+                                    <video autoplay loop muted playsinline>
+                                        <source src="videos/photoreceptors-evolving.mp4" type="video/mp4">
+                                    </video>
+                                    <video autoplay loop muted playsinline>
+                                        <source src="videos/positions-evolving.mp4" type="video/mp4">
+                                    </video>
+                                    <video autoplay loop muted playsinline>
+                                        <source src="videos/pupil-evolving.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <p class="media-caption">From left to right, top to bottom: agent vision when changing the number of eyes, photoreceptors, positions, and the pupil size.</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
             </div>
         </section>
 
