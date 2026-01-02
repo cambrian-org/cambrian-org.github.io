@@ -438,15 +438,43 @@
                 <div class="resource-group" id="talks">
                     <h3 class="resource-subhead">Talks</h3>
                     <div class="resource-grid">
+
+                        <article class="resource-card pastel-mint">
+                            <div class="resource-header">
+                                <span class="tag">Symposium on the Platonic Space</span>
+                            </div>
+                            <img class="resource-image" src="https://img.youtube.com/vi/J-ifBlxbW-8/hqdefault.jpg" alt="Brian Cheung at Michael Levin's Lab">
+                            <p><b>"The Emergence of Convergence in Different Levels of Biology and AI"</b> by <a href="https://briancheung.github.io/">Brian Cheung</a> at 
+                                <a href="https://thoughtforms.life/symposium-on-the-platonic-space/">Symposium on the Platonic Space</a>.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://www.youtube.com/watch?v=J-ifBlxbW-8&t=1632s">Watch Video</a>
+                                <a class="mini-link">Dec 2025</a>
+                            </div>
+                        </article>
+
+
                         <article class="resource-card pastel-mint">
                             <div class="resource-header">
                                 <span class="tag">UC Berkeley</span>
                             </div>
                             <img class="resource-image" src="images/redwood-recording.png" alt="Redwood Talk at UC Berkeley">
-                            <p>Highlights from a talk at UC Berkeley's Redwood Center by Kushagra Tiwary. Covers the project vision and open research questions.</p>
+                            <p><b>"Embodied Eyes For Scientific Discovery: Generation and Verification Loops to ask the "why" questions in vision"</b> by <a href="https://kushagratiwary.com/">Kushagra Tiwary</a> at <a href="https://redwood.berkeley.edu/">UC Berkeley's Redwood Center</a>.</p>
                             <div class="mini-links">
-                                <a class="mini-link" href="https://redwood.berkeley.edu/seminars/kushagra-tiwary-june-2025">Talk Details</a>
+                                <a class="mini-link" href="https://redwood.berkeley.edu/seminars/kushagra-tiwary-june-2025">Watch Video</a>
+                                <a class="mini-link">Jun 2025</a>
                             </div>
+                        </article>
+
+                        <article class="resource-card pastel-mint">
+                            <div class="resource-header">
+                                <span class="tag">Imagination in Action</span>
+                            </div>
+                            <img class="resource-image" src="https://img.youtube.com/vi/sUkcgYKBTr8/hqdefault.jpg" alt="Imagination in Action Talk">
+                            <p><b>"What-If Machines for Vision: Evolving Eyes and Brains with AI"</b> by <a href="https://kushagratiwary.com/">Kushagra Tiwary</a> at <a href="https://imaginationinaction.org/">Imagination in Action</a>.</p>
+                            <div class="mini-links">
+                                <a class="mini-link" href="https://www.youtube.com/watch?v=sUkcgYKBTr8">Watch Video</a>
+                                <a class="mini-link">April 2025</a>
+                            </div>  
                         </article>
 
                         <article class="resource-card pastel-peach">
@@ -457,6 +485,7 @@
                             <p>Tedx talk exploring the broader implications of evolving visual intelligence with artificial agents.</p>
                             <div class="mini-links">
                                 <a class="mini-link" href="https://www.youtube.com/watch?v=OuPwGkzh6nM">Watch Video</a>
+                                <a class="mini-link">September 2024</a>
                             </div>
                         </article>
 
@@ -572,6 +601,34 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            const resourceCards = document.querySelectorAll('.resource-card');
+
+            resourceCards.forEach(card => {
+                const primaryLink = card.querySelector('.mini-links a[href]') || card.querySelector('a[href]');
+                if (!primaryLink) return;
+
+                const openPrimaryLink = () => {
+                    window.open(primaryLink.href, '_blank', 'noopener');
+                };
+
+                card.addEventListener('click', (event) => {
+                    if (event.target.closest('a')) return;
+                    openPrimaryLink();
+                });
+
+                card.addEventListener('keydown', (event) => {
+                    if (event.target.closest('a')) return;
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        openPrimaryLink();
+                    }
+                });
+
+                card.classList.add('is-clickable');
+                card.setAttribute('tabindex', '0');
+                card.setAttribute('role', 'link');
+            });
+
             const toc = document.querySelector('.toc-panel');
             if (!toc) return;
 
